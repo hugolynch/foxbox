@@ -75,25 +75,47 @@ var myIcon = L.divIcon({
 
 });
 
-L.marker([43.671775, -79.334912],
-    {icon: myIcon}
-).addTo(mymap)
-    .bindPopup('37 Myrtle Ave. <br/><img width="150px" src="37myrtle.jpg"/>');
+var libraries = [
+    {
+        "address": "37 Myrtle Ave.",
+        "coordinates": [43.671775, -79.334912],
+        "image": "37myrtle.jpg"
+    },
+    {
+        "address": "247 Hastings Ave.",
+        "coordinates": [43.6707404, -79.3317763],
+        "image": ""
+    },
+    {
+        "address": "31 Harriet St.",
+        "coordinates": [43.6717621,-79.3326874],
+        "image": "31harriet.jpg"
+    },
+    {
+        "address": "42 Harriet St.",
+        "coordinates": [43.6719505,-79.3326482],
+    },
+    {
+        "address": "128 Leslie St.",
+        "coordinates": [43.6642594,-79.3306542],
+        "image": "128leslie.jpg"
+    }
+];
 
-L.marker([43.6707404, -79.3317763],
-    {icon: myIcon}
-).addTo(mymap)
-    .bindPopup('247 Hastings Ave.');
 
-L.marker([43.6717621,-79.3326874],
-    {icon: myIcon}
-).addTo(mymap)
-    .bindPopup('31 Harriet St.');
+libraries.forEach(function(library) {
+    var content = library.address;
 
-L.marker([43.6642594,-79.3306542],
-    {icon: myIcon}
-).addTo(mymap)
-    .bindPopup('128 Leslie St.');
+    if (library.image) {
+        content += '<br/><img width="150px" src="' + library.image + '"/>';
+    }
+
+    L.marker(library.coordinates, {icon: myIcon})
+        .addTo(mymap)
+        .bindPopup(content);
+});
+
+
 </script>
 
 </body>
