@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Open Exchange",
+  "version": "1.0",
+  "icons": [
+    {
+      "src": "app-icon.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "density": "2.0"
+    }
+  ],
+  "start_url": "index.html",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#ffb500"
+}
