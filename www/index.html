@@ -280,7 +280,7 @@ var libraries = [
     {"address":"35 Melbourne Ave.", "coordinates": [43.6401666,-79.4299252]},
     {"address":"Bay St.", "coordinates": [43.653226,-79.3831843]},
     {"address":"304 Lee Ave.", "coordinates": [43.6767177,-79.3005522]},
-    {"address":"104 Winners Cir.", "coordinates": [43.6670386,-79.3102638]},
+    {"address":"104 Winners Cir.", "coordinates": [43.6670386,-79.3102638], "image": "104winners.jpg"},
     {"address":"Ridley Gardens", "coordinates": [43.6431281,-79.4523751]},
     {"address":"37 Chillery Ave.", "coordinates": [43.7391236,-79.25575580000002], "image":"37chillery.jpg"},
     {"address":"178 Duplex Ave.", "coordinates": [43.7034346,-79.400181]},
@@ -369,6 +369,19 @@ function chooseAddr(lat1, lng1, lat2, lng2, osm_type) {
 /*
 https://github.com/derickr/osm-tools/blob/master/leaflet-nominatim-example/js/map.js
 */
+
+
+/*
+map.on('zoomend', function(event) {
+    document.body.className = "zoom"+map.getZoom();
+});
+
+
+.myIcon{background:red;}
+.zoom4 .myIcon{background:pint;}
+
+*/
+
 </script>
 
 </body>
