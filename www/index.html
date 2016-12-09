@@ -50,6 +50,20 @@ header {
     height: 16px !important;
 }
 
+.zoom11 .verified-div-icon,
+.zoom11 .my-div-icon {
+    width: 4px !important;
+    height: 4px !important;
+}
+
+.zoom12 .verified-div-icon,
+.zoom13 .verified-div-icon,
+.zoom12 .my-div-icon,
+.zoom13 .my-div-icon {
+    width: 10px !important;
+    height: 10px !important;
+}
+
 
 .leaflet-popup-content-wrapper {
     border-radius: 4px;
@@ -108,14 +122,13 @@ div#results {
 
 
 <script>
-
 var feature;
 
 var mymap = L.map('mapid').setView([43.671775, -79.334912], 13);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/hugolynch/ciw1168ie003k2kr33r5p963z/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaHVnb2x5bmNoIiwiYSI6ImNpdzEwbHc1YTA5Mm8yb3BiOHR5eHB5YWIifQ.9Gkbywr6-VD6cEJrUneNBA', {
     attribution: '',
-    minZoom: 12,
+    minZoom: 11,
     maxZoom: 18 
 }).addTo(mymap);
 
@@ -140,175 +153,29 @@ var verifiedIcon = L.divIcon({
 });
 
 
-var libraries = [
-    {
-        "address": "37 Myrtle Ave.",
-        "coordinates": [43.671775, -79.334912],
-        "image": "37myrtle.jpg",
-        "verified": true
-    },
-    {
-        "address": "247 Hastings Ave.",
-        "coordinates": [43.6707404, -79.3317763],
-        "image": "247hastings.jpg",
-        "verified": true
-    },
-    {
-        "address": "31 Harriet St.",
-        "coordinates": [43.6718078153846, -79.3328659230769],
-        "image": "31harriet.jpg",
-        "verified": true
-    },
-    {
-        "address": "42 Harriet St.",
-        "coordinates": [43.6720094510229, -79.3327912377355],
-        "image": "42harriet.jpg",
-        "verified": true
-    },
-    {
-        "address": "128 Leslie St.",
-        "coordinates": [43.6642594,-79.3306542],
-        "image": "128leslie.jpg",
-        "verified": true
-    },
-    {
-        "address": "279 Gainsborough Rd.",
-        "coordinates": [43.67848,-79.318659],
-        "image": "279gainsborough.jpg",
-        "verified": true
-    },
-    {
-        "address": "550 Clinton St.",
-        "coordinates": [43.6692778,-79.4194871],
-        "image": "550clinton.jpg",
-        "verified": true
-    },
-    {
-        "address": "375 Woodfield Ave.",
-        "coordinates": [43.674162, -79.324753],
-        "image": ""
-    },
-    {
-        "address": "353 Sherbourne St.",
-        "coordinates": [43.66313,-79.37290],
-        "image": ""
-    },
-    {"address":"98 Swanwick Ave.", "coordinates": [43.6831009,-79.2961528]},
-    {"address":"53 Lavinia Ave.", "coordinates": [43.646133886000484,-79.47747707699966]},
-    {"address":"253 Boon Ave.", "coordinates": [43.68350378200046,-79.44873768099967]},
-    {"address":"17 Ellsworth Ave.", "coordinates": [43.6818182,-79.4198949]},
-    {"address":"207 Glebemount Ave.", "coordinates": [43.6915839,-79.320557]},
-    {"address":"9 Mount Royal Ave.", "coordinates": [43.6751436,-79.43257]},
-    {"address":"24 Empire Ave.", "coordinates": [ 43.65803,-79.34373],"image":"24empire.jpg"},
-    {"address":"12 Mackenzie Cres.", "coordinates": [43.647777961000486,-79.42491259799965]},
-    {"address":"36 Kelvin Ave.", "coordinates": [43.6890839,-79.2949131]},
-    {"address":"149 Pacific Ave.", "coordinates": [43.65768444800045,-79.46526761899963]},
-    {"address":"56 Avonlea Blvd.", "coordinates": [43.6934473,-79.2952708]},
-    {"address":"270 Forest Hill Rd.", "coordinates": [43.70020315000045,-79.41499485399964]},
-    {"address":"123 Tyrrel Ave.", "coordinates": [43.6775311,-79.4268625]},
-    {"address":"356 Russell Hill Rd.", "coordinates": [43.6901207,-79.4099097]},
-    {"address":"66 Fairview Ave.", "coordinates": [43.6595371,-79.4762703]},
-    {"address":"156 Waverley Rd.", "coordinates": [43.6719236,-79.3017445]},
-    {"address":"18 Innisfree Ct.", "coordinates": [43.6406618,-79.4769782]},
-    {"address":"68 Yarrow Rd.", "coordinates": [43.6889082,-79.4756422]},
-    {"address":"332 Cleveland St.", "coordinates": [43.7085967,-79.3804967]},
-    {"address":"201 Oriole Pkwy.", "coordinates": [43.6976325,-79.4031462]},
-    {"address":"43 Loyalist Rd.", "coordinates": [43.6531393,-79.52124460000002]},
-    {"address":"87 Dawlish Ave.", "coordinates": [43.7211602,-79.3961243]},
-    {"address":"102 Margueretta St.", "coordinates": [43.653017787000465,-79.43819428999967]},
-    {"address":"315 Ellerslie Ave.", "coordinates": [43.7679203,-79.4296853]},
-    {"address":"151 Marion St.", "coordinates": [43.6409971,-79.4468643]},
-    {"address":"53 Osler St.", "coordinates": [43.6658426,-79.4568723]},
-    {"address":"39 Prince Arthur Ave.", "coordinates": [43.669198,-79.39742989999999]},
-    {"address":"14 Jerome St.", "coordinates": [43.6615738,-79.45569720000002]},
-    {"address":"187 Sixth St.", "coordinates": [43.60312629000049,-79.50494434299964]},
-    {"address":"8 Majestic Ct.", "coordinates": [43.7127405,-79.446559]},
-    {"address":"111 Fulton Ave.", "coordinates": [43.6827015,-79.35285809999999]},
-    {"address":"32 Epsom Ave.", "coordinates": [43.69194,-79.3063928]},
-    {"address":"228 Cottingham St.", "coordinates": [43.6790543,-79.4016954]},
-    {"address":"21 Appleton Ave.", "coordinates": [43.6798842,-79.4376161]},
-    {"address":"47 Laws St.", "coordinates": [43.66384460800049,-79.47442732699966]},
-    {"address":"135 Vaughan Rd.", "coordinates": [43.68486660000001,-79.4215704]},
-    {"address":"258 Castlefield Ave.", "coordinates": [43.7098553,-79.4099969]},
-    {"address":"8 Baby Point Rd.", "coordinates": [43.65852700000001,-79.4888794]},
-    {"address":"19 Glenn Morrow Mews", "coordinates": [43.6842978,-79.3050598]},
-    {"address":"181 Gledhill Ave.", "coordinates": [43.69222422600046,-79.31091742999968]},
-    {"address":"25 Liberty St.", "coordinates": [43.63822294300047,-79.42082556599968]},
-    {"address":"69 Lynn Williams St.", "coordinates": [43.639033491000475,-79.41548850399965]},
-    {"address":"132 King St.", "coordinates": [43.7065536,-79.51410249999999]},
-    {"address":"261 Brunswick Ave.", "coordinates": [43.6648911,-79.4066931]},
-    {"address":"19 Weatherell St.", "coordinates": [43.6512486,-79.4876925]},
-    {"address":"289 Ridgewood Rd.", "coordinates": [43.7910363,-79.1340589]},
-    {"address":"318 Fairlawn", "coordinates": [43.7286483,-79.4153402]},
-    {"address":"755 Indian Rd.", "coordinates": [43.6627018,-79.4586995]},
-    {"address":"164 Dovercourt Rd.", "coordinates": [43.6455138,-79.4234182]},
-    {"address":"526 Soudan Ave.", "coordinates": [43.7081471,-79.3798075]},
-    {"address":"Rosedale", "coordinates": [43.682,-79.38140039999999]},
-    {"address":"93 Nesbitt Drive; Nesbitt Park", "coordinates": [43.6932269,-79.3667954]},
-    {"address":"22 Fernwood Park Ave.", "coordinates": [43.6704335,-79.2883645]},
-    {"address":"308 Sackville St.", "coordinates": [43.663545566667, -79.364608066667]},
-    {"address":"77 Wilson Park Rd.", "coordinates": [43.6388931,-79.4420665]},
-    {"address":"848 Palmerston Ave.", "coordinates": [43.6712807,-79.4162277]},
-    {"address":"70 McRoberts Ave.", "coordinates": [43.6779237,-79.4544682]},
-    {"address":"123 Woodfield Rd.", "coordinates": [43.66746149999999,-79.3220259]},
-    {"address":"114 Bevdale Rd.", "coordinates": [43.7730295,-79.4347138]},
-    {"address":"33 Delaney Cres.", "coordinates": [43.6463973,-79.4353953],"image":"33delaney.jpg"},
-    {"address":"81 Coleman Ave.", "coordinates": [43.6899354,-79.2982921]},
-    {"address":"37 Wyndham St.", "coordinates": [43.6474159,-79.43632509999999]},
-    {"address":"McCormick Park 66 Sheridan Ave.", "coordinates": [43.7724257,-79.257713]},
-    {"address":"14 Mendel Ave.", "coordinates": [43.6842694,-79.3128986]},
-    {"address":"1 Bluenose Cres.", "coordinates": [43.7938403,-79.16289350000001]},
-    {"address":"127 Parkmount Rd.", "coordinates": [43.6802703,-79.32512249999999]},
-    {"address":"563 St. Clarens Ave.", "coordinates": [43.66205710000001,-79.4430885]},
-    {"address":"268 Havelock St.", "coordinates": [43.6599906,-79.432244]},
-    {"address":"468 Grace St.", "coordinates": [43.6623473,-79.418413]},
-    {"address":"64 Ford St.", "coordinates": [43.6722748,-79.46200619999999]},
-    {"address":"902 Millwood Rd.", "coordinates": [43.7033844,-79.363373]},
-    {"address":"76 Robbins Ave.", "coordinates": [43.671036,-79.3155223]},
-    {"address":"35 Parkway Ave.", "coordinates": [43.6500196,-79.44781200000001]},
-    {"address":"12 Hazelbrae Rd.", "coordinates": [43.6463708,-79.4826586]},
-    {"address":"46 Lawlor Ave.", "coordinates": [43.68172450000001,-79.28920620000001]},
-    {"address":"43 Galley Ave.", "coordinates": [43.6438725,-79.4415879]},
-    {"address":"663 Euclid Ave.", "coordinates": [43.6634152,-79.4141489]},
-    {"address":"54 Stuart Ave.", "coordinates": [43.7538197,-79.41778269999999]},
-    {"address":"Queensbury Ave.", "coordinates": [43.6904221,-79.27645299999999]},
-    {"address":"20 Abbott Ave.", "coordinates": [43.6606138,-79.4558785]},
-    {"address":"256 Rusholme Rd.", "coordinates": [43.657726,-79.43012879999999]},
-    {"address":"89 Armadale ave", "coordinates": [43.647806,-79.481895]},
-    {"address":"2789 Lake Shore Blvd W", "coordinates": [43.60184292700046,-79.50028275299968]},
-    {"address":"24 Fifth St., Ward's Island", "coordinates": [43.6323711,-79.3566683]},
-    {"address":"35 Melbourne Ave.", "coordinates": [43.6401666,-79.4299252]},
-    {"address":"Bay St.", "coordinates": [43.653226,-79.3831843]},
-    {"address":"304 Lee Ave.", "coordinates": [43.6767177,-79.3005522]},
-    {"address":"104 Winners Cir.", "coordinates": [43.6670386,-79.3102638], "image": "104winners.jpg"},
-    {"address":"Ridley Gardens", "coordinates": [43.6431281,-79.4523751]},
-    {"address":"37 Chillery Ave.", "coordinates": [43.7391236,-79.25575580000002], "image":"37chillery.jpg"},
-    {"address":"178 Duplex Ave.", "coordinates": [43.7034346,-79.400181]},
-    {"address":"97 Main St.", "coordinates": [43.6821397,-79.29927649999999]},
-    {"address":"98 Swanwick Ave.", "coordinates": [43.6831009,-79.2961528]},
-    {"address":"21 Kingswood Rd.", "coordinates": [43.6746237,-79.28320010000002]},
-    {"address":"8 Rosita Cres.", "coordinates": [43.7122623,-79.29074949999999]},
-    {"address":"666 Durie St.", "coordinates": [43.66341684800045,-79.48402420899964]},
-    {"address":"548 Atlas Ave.", "coordinates": [43.6970597,-79.4381283]},
-    {"address":"112 Braemore Gardens", "coordinates": [43.67736319999999,-79.4232887]},
-    {"address":"84 Caithness Ave.", "coordinates": [43.6837654,-79.3362581]},
-    {"address":"127 Highbourne Rd.", "coordinates": [43.70185499999999,-79.40604800000001]},
-    {"address":"65 King George's Rd.", "coordinates": [43.65067759999999,-79.5105087]},
-    {"address":"21 Airdrie Rd.", "coordinates": [43.6997991,-79.37155039999999]},
-    {"address":"25 Delaney Cres.", "coordinates": [43.646296,-79.4354613], "image":"25delaney.jpg"},
-    {"address":"15 Magwood Ct.", "coordinates": [43.661326,-79.4952813]},
-];
-
-
+var libraries;
+$.getJSON('libraries.json', function(data) {
+    libraries = data;
 libraries.forEach(function(library) {
-    var content = library.address;
 
+    var tooltipTemplate =  '{address}';
     if (library.image) {
-        content += '<br/><img width="150px" src="images/' + library.image + '"/>';
+        tooltipTemplate += '<br/><img width="150px" src="images/{image}"/>';
+    } else {
+        tooltipTemplate += '<br/><a href="#"><img src="images/ic_add_a_photo_black_24px.svg"/>Add a photo</a>';
+        tooltipTemplate += '<form action="save.php" method="post" enctype="multipart/form-data">';
+        tooltipTemplate += '<input type="file" name="photo"/><input type="hidden" name="loc" value="{address}"/>';
+        tooltipTemplate += '<button type="submit">Save</button></form>';
     }
 
+    var tooltipData = {  
+        address: library.address,
+        image: library.image
+    };
+
+    var tooltipContent = L.Util.template(tooltipTemplate, tooltipData); 
+
     if (library.verified) {
-        console.log('verified');
         icon = verifiedIcon;
     } else {
         icon = myIcon;
@@ -316,15 +183,19 @@ libraries.forEach(function(library) {
 
     L.marker(library.coordinates, {icon: icon})
         .addTo(mymap)
-        .bindPopup(content);
+        .bindPopup(tooltipContent);
 });
+
+});
+
+
+
 
 
 function addr_search() {
     var inp = document.getElementById("addr");
-console.log(inp);
-
-    $.getJSON('http://nominatim.openstreetmap.org/search?format=json&limit=5&q=' + inp.value, function(data) {
+    var address = inp.value + " Toronto";
+    $.getJSON('http://nominatim.openstreetmap.org/search?format=json&limit=5&q=' + address, function(data) {
         var items = [];
 
         $.each(data, function(key, val) {
@@ -371,15 +242,88 @@ https://github.com/derickr/osm-tools/blob/master/leaflet-nominatim-example/js/ma
 */
 
 
-/*
-map.on('zoomend', function(event) {
-    document.body.className = "zoom"+map.getZoom();
+mymap.on('zoomend', function(event) {
+    document.body.className = "zoom"+mymap.getZoom();
 });
 
 
-.myIcon{background:red;}
-.zoom4 .myIcon{background:pint;}
+/*
 
+// attaching function on map click
+//http://jsfiddle.net/kedar2a/5VLJU/8/
+mymap.on('click', onMapClick);
+*/
+
+/*
+function onMapClick(e) {
+
+    var geojsonFeature = {
+        "type": "Feature",
+            "properties": {},
+            "geometry": {
+                "type": "Point",
+                "coordinates": [e.latlng.lat, e.latlng.lng]
+        }
+    }
+
+    var marker;
+
+    L.geoJson(geojsonFeature, {
+        
+        pointToLayer: function(feature, latlng){
+            
+            marker = L.marker(e.latlng, {
+                
+                title: "Resource Location",
+                alt: "Resource Location",
+                riseOnHover: true,
+                draggable: true,
+
+            }).bindPopup("<input type='button' value='Delete this marker' class='marker-delete-button'/>");
+
+            marker.on("popupopen", onPopupOpen);
+       
+            return marker;
+        }
+    }).addTo(mymap);
+}
+
+// Function to handle delete as well as other events on marker popup open
+function onPopupOpen() {
+
+    var tempMarker = this;
+
+    //var tempMarkerGeoJSON = this.toGeoJSON();
+
+    //var lID = tempMarker._leaflet_id; // Getting Leaflet ID of this marker
+
+    // To remove marker on click of delete
+    $(".marker-delete-button:visible").click(function () {
+        mymap.removeLayer(tempMarker);
+    });
+}
+
+
+// getting all the markers at once
+function getAllMarkers() {
+    
+    var allMarkersObjArray = [];//new Array();
+    var allMarkersGeoJsonArray = [];//new Array();
+
+    $.each(map._layers, function (ml) {
+        //console.log(map._layers)
+        if (mymap._layers[ml].feature) {
+            
+            allMarkersObjArray.push(this)
+                                    allMarkersGeoJsonArray.push(JSON.stringify(this.toGeoJSON()))
+        }
+    })
+
+    console.log(allMarkersObjArray);
+    alert("total Markers : " + allMarkersGeoJsonArray.length + "\n\n" + allMarkersGeoJsonArray + "\n\n Also see your console for object view of this array" );
+}
+
+$(".get-markers").on("click", getAllMarkers);
 */
 
 </script>

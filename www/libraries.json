@@ -1,0 +1,1672 @@
+[
+    {
+        "address": "56 Walpole Ave.",
+        "coordinates": [
+            43.67443,
+            -79.32743
+        ],
+        "verified": true
+    },
+    {
+        "address": "37 Myrtle Ave.",
+        "coordinates": [
+            43.671775,
+            -79.334912
+        ],
+        "image": "37myrtle.jpg",
+        "verified": true
+    },
+    {
+        "address": "247 Hastings Ave.",
+        "coordinates": [
+            43.6707404,
+            -79.3317763
+        ],
+        "image": "247hastings.jpg",
+        "verified": true
+    },
+    {
+        "address": "31 Harriet St.",
+        "coordinates": [
+            43.671807815385,
+            -79.332865923077
+        ],
+        "image": "31harriet.jpg",
+        "verified": true
+    },
+    {
+        "address": "42 Harriet St.",
+        "coordinates": [
+            43.672009451023,
+            -79.332791237736
+        ],
+        "image": "42harriet.jpg",
+        "verified": true
+    },
+    {
+        "address": "128 Leslie St.",
+        "coordinates": [
+            43.6642594,
+            -79.3306542
+        ],
+        "image": "128leslie.jpg",
+        "verified": true
+    },
+    {
+        "address": "279 Gainsborough Rd.",
+        "coordinates": [
+            43.67848,
+            -79.318659
+        ],
+        "image": "279gainsborough.jpg",
+        "verified": true
+    },
+    {
+        "address": "550 Clinton St.",
+        "coordinates": [
+            43.6692778,
+            -79.4194871
+        ],
+        "image": "550clinton.jpg",
+        "verified": true
+    },
+    {
+        "address": "375 Woodfield Ave.",
+        "coordinates": [
+            43.674162,
+            -79.324753
+        ],
+        "image": "375woodfield.jpg",
+        "verified": true
+    },
+    {
+        "address": "353 Sherbourne St.",
+        "coordinates": [
+            43.66313,
+            -79.3729
+        ],
+        "image": "",
+        "verified": true
+    },
+    {
+        "address": "760 Rhodes Ave.",
+        "coordinates": [
+            43.68263,
+            -79.32469
+        ],
+        "image": "760rhodes.jpg",
+        "verified": true
+    },
+    {
+        "address": "600 Rhodes Ave.",
+        "coordinates": [
+            43.67993,
+            -79.32358
+        ],
+        "image": "600rhodes.jpg",
+        "verified": true
+    },
+    {
+        "address": "McCormick Park",
+        "coordinates": [
+            43.646483,
+            -79.433919
+        ]
+    },
+    {
+        "address": "4414 Lawrence Ave.",
+        "coordinates": [
+            43.77289,
+            -79.16687
+        ],
+        "image": "4414lawrence.jpg",
+        "verified": true
+    },
+    {
+        "address": "98 Swanwick Ave.",
+        "coordinates": [
+            43.6831009,
+            -79.2961528
+        ]
+    },
+    {
+        "address": "53 Lavinia Ave.",
+        "coordinates": [
+            43.646133886,
+            -79.477477077
+        ]
+    },
+    {
+        "address": "253 Boon Ave.",
+        "coordinates": [
+            43.683503782,
+            -79.448737681
+        ]
+    },
+    {
+        "address": "17 Ellsworth Ave.",
+        "coordinates": [
+            43.6818182,
+            -79.4198949
+        ]
+    },
+    {
+        "address": "207 Glebemount Ave.",
+        "coordinates": [
+            43.6915839,
+            -79.320557
+        ]
+    },
+    {
+        "address": "9 Mount Royal Ave.",
+        "coordinates": [
+            43.6751436,
+            -79.43257
+        ]
+    },
+    {
+        "address": "24 Empire Ave.",
+        "coordinates": [
+            43.65803,
+            -79.34373
+        ],
+        "image": "24empire.jpg"
+    },
+    {
+        "address": "12 Mackenzie Cres.",
+        "coordinates": [
+            43.647777961,
+            -79.424912598
+        ]
+    },
+    {
+        "address": "36 Kelvin Ave.",
+        "coordinates": [
+            43.6890839,
+            -79.2949131
+        ]
+    },
+    {
+        "address": "149 Pacific Ave.",
+        "coordinates": [
+            43.657684448,
+            -79.465267619
+        ]
+    },
+    {
+        "address": "56 Avonlea Blvd.",
+        "coordinates": [
+            43.6934473,
+            -79.2952708
+        ]
+    },
+    {
+        "address": "270 Forest Hill Rd.",
+        "coordinates": [
+            43.70020315,
+            -79.414994854
+        ]
+    },
+    {
+        "address": "123 Tyrrel Ave.",
+        "coordinates": [
+            43.6775311,
+            -79.4268625
+        ]
+    },
+    {
+        "address": "356 Russell Hill Rd.",
+        "coordinates": [
+            43.6901207,
+            -79.4099097
+        ]
+    },
+    {
+        "address": "66 Fairview Ave.",
+        "coordinates": [
+            43.6595371,
+            -79.4762703
+        ]
+    },
+    {
+        "address": "156 Waverley Rd.",
+        "coordinates": [
+            43.6719236,
+            -79.3017445
+        ]
+    },
+    {
+        "address": "18 Innisfree Ct.",
+        "coordinates": [
+            43.6406618,
+            -79.4769782
+        ]
+    },
+    {
+        "address": "68 Yarrow Rd.",
+        "coordinates": [
+            43.6889082,
+            -79.4756422
+        ]
+    },
+    {
+        "address": "332 Cleveland St.",
+        "coordinates": [
+            43.7085967,
+            -79.3804967
+        ]
+    },
+    {
+        "address": "201 Oriole Pkwy.",
+        "coordinates": [
+            43.6976325,
+            -79.4031462
+        ]
+    },
+    {
+        "address": "43 Loyalist Rd.",
+        "coordinates": [
+            43.6531393,
+            -79.5212446
+        ]
+    },
+    {
+        "address": "87 Dawlish Ave.",
+        "coordinates": [
+            43.7211602,
+            -79.3961243
+        ]
+    },
+    {
+        "address": "102 Margueretta St.",
+        "coordinates": [
+            43.653017787,
+            -79.43819429
+        ]
+    },
+    {
+        "address": "315 Ellerslie Ave.",
+        "coordinates": [
+            43.7679203,
+            -79.4296853
+        ]
+    },
+    {
+        "address": "151 Marion St.",
+        "coordinates": [
+            43.6409971,
+            -79.4468643
+        ]
+    },
+    {
+        "address": "53 Osler St.",
+        "coordinates": [
+            43.6658426,
+            -79.4568723
+        ]
+    },
+    {
+        "address": "39 Prince Arthur Ave.",
+        "coordinates": [
+            43.669198,
+            -79.3974299
+        ],
+        "image": "39princearthur.jpg",
+        "verified": true
+    },
+    {
+        "address": "14 Jerome St.",
+        "coordinates": [
+            43.6615738,
+            -79.4556972
+        ]
+    },
+    {
+        "address": "187 Sixth St.",
+        "coordinates": [
+            43.60312629,
+            -79.504944343
+        ]
+    },
+    {
+        "address": "8 Majestic Ct.",
+        "coordinates": [
+            43.7127405,
+            -79.446559
+        ]
+    },
+    {
+        "address": "111 Fulton Ave.",
+        "coordinates": [
+            43.6827015,
+            -79.3528581
+        ]
+    },
+    {
+        "address": "32 Epsom Ave.",
+        "coordinates": [
+            43.69194,
+            -79.3063928
+        ]
+    },
+    {
+        "address": "228 Cottingham St.",
+        "coordinates": [
+            43.6790543,
+            -79.4016954
+        ]
+    },
+    {
+        "address": "21 Appleton Ave.",
+        "coordinates": [
+            43.6798842,
+            -79.4376161
+        ]
+    },
+    {
+        "address": "47 Laws St.",
+        "coordinates": [
+            43.663844608,
+            -79.474427327
+        ]
+    },
+    {
+        "address": "135 Vaughan Rd.",
+        "coordinates": [
+            43.6848666,
+            -79.4215704
+        ]
+    },
+    {
+        "address": "258 Castlefield Ave.",
+        "coordinates": [
+            43.7098553,
+            -79.4099969
+        ]
+    },
+    {
+        "address": "8 Baby Point Rd.",
+        "coordinates": [
+            43.658527,
+            -79.4888794
+        ]
+    },
+    {
+        "address": "19 Glenn Morrow Mews",
+        "coordinates": [
+            43.6842978,
+            -79.3050598
+        ]
+    },
+    {
+        "address": "181 Gledhill Ave.",
+        "coordinates": [
+            43.692224226,
+            -79.31091743
+        ]
+    },
+    {
+        "address": "25 Liberty St.",
+        "coordinates": [
+            43.638222943,
+            -79.420825566
+        ],
+        "image": "25liberty.jpg",
+        "verified": true
+    },
+    {
+        "address": "69 Lynn Williams St.",
+        "coordinates": [
+            43.639033491,
+            -79.415488504
+        ]
+    },
+    {
+        "address": "132 King St.",
+        "coordinates": [
+            43.7065536,
+            -79.5141025
+        ]
+    },
+    {
+        "address": "261 Brunswick Ave.",
+        "coordinates": [
+            43.6648911,
+            -79.4066931
+        ],
+        "image": "261brunswick.jpg",
+        "verified": true
+    },
+    {
+        "address": "19 Weatherell St.",
+        "coordinates": [
+            43.6512486,
+            -79.4876925
+        ]
+    },
+    {
+        "address": "289 Ridgewood Rd.",
+        "coordinates": [
+            43.7910363,
+            -79.1340589
+        ]
+    },
+    {
+        "address": "318 Fairlawn",
+        "coordinates": [
+            43.7286483,
+            -79.4153402
+        ]
+    },
+    {
+        "address": "755 Indian Rd.",
+        "coordinates": [
+            43.6627018,
+            -79.4586995
+        ]
+    },
+    {
+        "address": "164 Dovercourt Rd.",
+        "coordinates": [
+            43.6455138,
+            -79.4234182
+        ]
+    },
+    {
+        "address": "526 Soudan Ave.",
+        "coordinates": [
+            43.7081471,
+            -79.3798075
+        ]
+    },
+    {
+        "address": "Rosedale",
+        "coordinates": [
+            43.682,
+            -79.3814004
+        ]
+    },
+    {
+        "address": "93 Nesbitt Drive; Nesbitt Park",
+        "coordinates": [
+            43.6932269,
+            -79.3667954
+        ]
+    },
+    {
+        "address": "22 Fernwood Park Ave.",
+        "coordinates": [
+            43.6704335,
+            -79.2883645
+        ]
+    },
+    {
+        "address": "308 Sackville St.",
+        "coordinates": [
+            43.663545566667,
+            -79.364608066667
+        ]
+    },
+    {
+        "address": "77 Wilson Park Rd.",
+        "coordinates": [
+            43.6388931,
+            -79.4420665
+        ]
+    },
+    {
+        "address": "848 Palmerston Ave.",
+        "coordinates": [
+            43.6712807,
+            -79.4162277
+        ],
+        "image": "848palmerston.jpg",
+        "verified": true
+    },
+    {
+        "address": "70 McRoberts Ave.",
+        "coordinates": [
+            43.6779237,
+            -79.4544682
+        ]
+    },
+    {
+        "address": "123 Woodfield Rd.",
+        "coordinates": [
+            43.6674615,
+            -79.3220259
+        ]
+    },
+    {
+        "address": "114 Bevdale Rd.",
+        "coordinates": [
+            43.7730295,
+            -79.4347138
+        ]
+    },
+    {
+        "address": "33 Delaney Cres.",
+        "coordinates": [
+            43.6463973,
+            -79.4353953
+        ],
+        "image": "33delaney.jpg"
+    },
+    {
+        "address": "81 Coleman Ave.",
+        "coordinates": [
+            43.6899354,
+            -79.2982921
+        ]
+    },
+    {
+        "address": "37 Wyndham St.",
+        "coordinates": [
+            43.6474159,
+            -79.4363251
+        ]
+    },
+    {
+        "address": "McCormick Park 66 Sheridan Ave.",
+        "coordinates": [
+            43.7724257,
+            -79.257713
+        ]
+    },
+    {
+        "address": "14 Mendel Ave.",
+        "coordinates": [
+            43.6842694,
+            -79.3128986
+        ]
+    },
+    {
+        "address": "1 Bluenose Cres.",
+        "coordinates": [
+            43.7938403,
+            -79.1628935
+        ]
+    },
+    {
+        "address": "127 Parkmount Rd.",
+        "coordinates": [
+            43.6802703,
+            -79.3251225
+        ],
+        "image": "127parkmount.jpg",
+        "verified": true
+    },
+    {
+        "address": "563 St. Clarens Ave.",
+        "coordinates": [
+            43.6620571,
+            -79.4430885
+        ]
+    },
+    {
+        "address": "268 Havelock St.",
+        "coordinates": [
+            43.6599906,
+            -79.432244
+        ]
+    },
+    {
+        "address": "468 Grace St.",
+        "coordinates": [
+            43.6623473,
+            -79.418413
+        ],
+        "image": "468grace.jpg",
+        "verified": true
+    },
+    {
+        "address": "64 Ford St.",
+        "coordinates": [
+            43.6722748,
+            -79.4620062
+        ]
+    },
+    {
+        "address": "902 Millwood Rd.",
+        "coordinates": [
+            43.7033844,
+            -79.363373
+        ]
+    },
+    {
+        "address": "76 Robbins Ave.",
+        "coordinates": [
+            43.671036,
+            -79.3155223
+        ]
+    },
+    {
+        "address": "35 Parkway Ave.",
+        "coordinates": [
+            43.6500196,
+            -79.447812
+        ]
+    },
+    {
+        "address": "12 Hazelbrae Rd.",
+        "coordinates": [
+            43.6463708,
+            -79.4826586
+        ]
+    },
+    {
+        "address": "46 Lawlor Ave.",
+        "coordinates": [
+            43.6817245,
+            -79.2892062
+        ]
+    },
+    {
+        "address": "43 Galley Ave.",
+        "coordinates": [
+            43.6438725,
+            -79.4415879
+        ]
+    },
+    {
+        "address": "663 Euclid Ave.",
+        "coordinates": [
+            43.6634152,
+            -79.4141489
+        ],
+        "image": "663euclid.jpg",
+        "verified": true
+    },
+    {
+        "address": "54 Stuart Ave.",
+        "coordinates": [
+            43.7538197,
+            -79.4177827
+        ]
+    },
+    {
+        "address": "Queensbury Ave.",
+        "coordinates": [
+            43.6904221,
+            -79.276453
+        ]
+    },
+    {
+        "address": "20 Abbott Ave.",
+        "coordinates": [
+            43.6606138,
+            -79.4558785
+        ]
+    },
+    {
+        "address": "256 Rusholme Rd.",
+        "coordinates": [
+            43.657726,
+            -79.4301288
+        ]
+    },
+    {
+        "address": "89 Armadale ave",
+        "coordinates": [
+            43.647806,
+            -79.481895
+        ]
+    },
+    {
+        "address": "2789 Lake Shore Blvd W",
+        "coordinates": [
+            43.601842927,
+            -79.500282753
+        ]
+    },
+    {
+        "address": "24 Fifth St., Ward's Island",
+        "coordinates": [
+            43.6323711,
+            -79.3566683
+        ]
+    },
+    {
+        "address": "35 Melbourne Ave.",
+        "coordinates": [
+            43.6401666,
+            -79.4299252
+        ]
+    },
+    {
+        "address": "Bay St.",
+        "coordinates": [
+            43.653226,
+            -79.3831843
+        ]
+    },
+    {
+        "address": "304 Lee Ave.",
+        "coordinates": [
+            43.6767177,
+            -79.3005522
+        ]
+    },
+    {
+        "address": "104 Winners Cir.",
+        "coordinates": [
+            43.6670386,
+            -79.3102638
+        ],
+        "image": "104winners.jpg"
+    },
+    {
+        "address": "Ridley Gardens",
+        "coordinates": [
+            43.6431281,
+            -79.4523751
+        ]
+    },
+    {
+        "address": "37 Chillery Ave.",
+        "coordinates": [
+            43.7391236,
+            -79.2557558
+        ],
+        "image": "37chillery.jpg"
+    },
+    {
+        "address": "178 Duplex Ave.",
+        "coordinates": [
+            43.7034346,
+            -79.400181
+        ]
+    },
+    {
+        "address": "97 Main St.",
+        "coordinates": [
+            43.6821397,
+            -79.2992765
+        ]
+    },
+    {
+        "address": "98 Swanwick Ave.",
+        "coordinates": [
+            43.6831009,
+            -79.2961528
+        ]
+    },
+    {
+        "address": "21 Kingswood Rd.",
+        "coordinates": [
+            43.6746237,
+            -79.2832001
+        ]
+    },
+    {
+        "address": "8 Rosita Cres.",
+        "coordinates": [
+            43.7122623,
+            -79.2907495
+        ]
+    },
+    {
+        "address": "666 Durie St.",
+        "coordinates": [
+            43.663416848,
+            -79.484024209
+        ]
+    },
+    {
+        "address": "548 Atlas Ave.",
+        "coordinates": [
+            43.6970597,
+            -79.4381283
+        ]
+    },
+    {
+        "address": "112 Braemore Gardens",
+        "coordinates": [
+            43.6773632,
+            -79.4232887
+        ]
+    },
+    {
+        "address": "84 Caithness Ave.",
+        "coordinates": [
+            43.6837654,
+            -79.3362581
+        ]
+    },
+    {
+        "address": "127 Highbourne Rd.",
+        "coordinates": [
+            43.701855,
+            -79.406048
+        ]
+    },
+    {
+        "address": "65 King George's Rd.",
+        "coordinates": [
+            43.6506776,
+            -79.5105087
+        ]
+    },
+    {
+        "address": "21 Airdrie Rd.",
+        "coordinates": [
+            43.6997991,
+            -79.3715504
+        ]
+    },
+    {
+        "address": "25 Delaney Cres.",
+        "coordinates": [
+            43.646296,
+            -79.4354613
+        ],
+        "image": "25delaney.jpg"
+    },
+    {
+        "address": "15 Magwood Ct.",
+        "coordinates": [
+            43.661326,
+            -79.4952813
+        ]
+    },
+    {
+        "id": "LIB02",
+        "address": "Agincourt",
+        "coordinates": [
+            43.785166666667,
+            -79.29342962963
+        ]
+    },
+    {
+        "id": "LIB03",
+        "address": "Albert Campbell",
+        "coordinates": [
+            43.708018518519,
+            -79.269251851852
+        ]
+    },
+    {
+        "id": "LIB04",
+        "address": "Albion",
+        "coordinates": [
+            43.739825925926,
+            -79.584096296296
+        ]
+    },
+    {
+        "id": "LIB020",
+        "address": "Alderwood",
+        "coordinates": [
+            43.601944444444,
+            -79.547251851852
+        ]
+    },
+    {
+        "id": "LIB021",
+        "address": "Amesbury Park",
+        "coordinates": [
+            43.706455555556,
+            -79.485725925926
+        ]
+    },
+    {
+        "id": "LIB022",
+        "address": "Annette Street",
+        "coordinates": [
+            43.663359259259,
+            -79.466348148148
+        ]
+    },
+    {
+        "id": "LIB023",
+        "address": "Armour Heights",
+        "coordinates": [
+            43.739337037037,
+            -79.421888888889
+        ]
+    },
+    {
+        "id": "LIB05",
+        "address": "Barbara Frum",
+        "coordinates": [
+            43.720751851852,
+            -79.432214814815
+        ]
+    },
+    {
+        "id": "LIB024",
+        "address": "Bayview",
+        "coordinates": [
+            43.768855555556,
+            -79.385
+        ]
+    },
+    {
+        "id": "LIB025",
+        "address": "Beaches",
+        "coordinates": [
+            43.67012962963,
+            -79.298525925926
+        ]
+    },
+    {
+        "id": "LIB026",
+        "address": "Bendale",
+        "coordinates": [
+            43.751062962963,
+            -79.244051851852
+        ]
+    },
+    {
+        "id": "LIB027",
+        "address": "Black Creek",
+        "coordinates": [
+            43.721218518519,
+            -79.510466666667
+        ]
+    },
+    {
+        "id": "LIB06",
+        "address": "Bloor\/Gladstone",
+        "coordinates": [
+            43.659877777778,
+            -79.434022222222
+        ]
+    },
+    {
+        "id": "LIB07",
+        "address": "Brentwood",
+        "coordinates": [
+            43.647448148148,
+            -79.514259259259
+        ]
+    },
+    {
+        "id": "LIB028",
+        "address": "Bridlewood",
+        "coordinates": [
+            43.797144444444,
+            -79.31777037037
+        ]
+    },
+    {
+        "id": "LIB029",
+        "address": "Brookbanks",
+        "coordinates": [
+            43.759507407407,
+            -79.325903703704
+        ]
+    },
+    {
+        "id": "LIB030",
+        "address": "Burrows Hall",
+        "coordinates": [
+            43.793885185185,
+            -79.23422962963
+        ]
+    },
+    {
+        "id": "LIB08",
+        "address": "Cedarbrae",
+        "coordinates": [
+            43.75752962963,
+            -79.223962962963
+        ]
+    },
+    {
+        "id": "LIB031",
+        "address": "Centennial",
+        "coordinates": [
+            43.772988888889,
+            -79.449577777778
+        ]
+    },
+    {
+        "id": "LIB032",
+        "address": "City Hall",
+        "coordinates": [
+            43.653366666667,
+            -79.383992592593
+        ]
+    },
+    {
+        "id": "LIB033",
+        "address": "Cliffcrest",
+        "coordinates": [
+            43.72517,
+            -79.23077
+        ]
+    },
+    {
+        "id": "LIB034",
+        "address": "College\/Shaw",
+        "coordinates": [
+            43.655159259259,
+            -79.420111111111
+        ]
+    },
+    {
+        "id": "LIB035",
+        "address": "Danforth\/Coxwell",
+        "coordinates": [
+            43.683574074074,
+            -79.3214
+        ]
+    },
+    {
+        "id": "LIB036",
+        "address": "Davenport",
+        "coordinates": [
+            43.67452962963,
+            -79.428451851852
+        ]
+    },
+    {
+        "id": "LIB037",
+        "address": "Dawes Road",
+        "coordinates": [
+            43.701174074074,
+            -79.297325925926
+        ]
+    },
+    {
+        "id": "LIB038",
+        "address": "Deer Park",
+        "coordinates": [
+            43.688581481481,
+            -79.392481481481
+        ]
+    },
+    {
+        "id": "LIB09",
+        "address": "Don Mills",
+        "coordinates": [
+            43.736640740741,
+            -79.347340740741
+        ]
+    },
+    {
+        "id": "LIB039",
+        "address": "Downsview",
+        "coordinates": [
+            43.72887037037,
+            -79.482051851852
+        ]
+    },
+    {
+        "id": "LIB040",
+        "address": "Dufferin\/St. Clair",
+        "coordinates": [
+            43.67692962963,
+            -79.442407407407
+        ]
+    },
+    {
+        "id": "LIB041",
+        "address": "Eatonville",
+        "coordinates": [
+            43.646122222222,
+            -79.559162962963
+        ]
+    },
+    {
+        "id": "LIB042",
+        "address": "Eglinton Square",
+        "coordinates": [
+            43.723685185185,
+            -79.300333333333
+        ]
+    },
+    {
+        "id": "LIB043",
+        "address": "Elmbrook Park",
+        "coordinates": [
+            43.660122222222,
+            -79.583844444444
+        ]
+    },
+    {
+        "id": "LIB044",
+        "address": "Evelyn Gregory",
+        "coordinates": [
+            43.686188888889,
+            -79.472348148148
+        ]
+    },
+    {
+        "id": "LIB010",
+        "address": "Fairview",
+        "coordinates": [
+            43.779025925926,
+            -79.346644444444
+        ]
+    },
+    {
+        "id": "LIB045",
+        "address": "Flemingdon Park",
+        "coordinates": [
+            43.717811111111,
+            -79.331755555556
+        ]
+    },
+    {
+        "id": "LIB046",
+        "address": "Forest Hill",
+        "coordinates": [
+            43.702366666667,
+            -79.42057037037
+        ]
+    },
+    {
+        "id": "LIB140",
+        "address": "Fort York",
+        "coordinates": [
+            43.6393204,
+            -79.4003296
+        ]
+    },
+    {
+        "id": "LIB047",
+        "address": "Gerrard\/Ashdale",
+        "coordinates": [
+            43.672462962963,
+            -79.322125925926
+        ]
+    },
+    {
+        "id": "LIB048",
+        "address": "Goldhawk Park",
+        "coordinates": [
+            43.823974074074,
+            -79.277992592593
+        ]
+    },
+    {
+        "id": "LIB139",
+        "address": "Guildwood",
+        "coordinates": [
+            43.74667037037,
+            -79.199888888889
+        ]
+    },
+    {
+        "id": "LIB049",
+        "address": "High Park",
+        "coordinates": [
+            43.645203703704,
+            -79.448985185185
+        ]
+    },
+    {
+        "id": "LIB050",
+        "address": "Highland Creek",
+        "coordinates": [
+            43.789959259259,
+            -79.175207407407
+        ]
+    },
+    {
+        "id": "LIB051",
+        "address": "Hillcrest",
+        "coordinates": [
+            43.797025925926,
+            -79.369044444444
+        ]
+    },
+    {
+        "id": "LIB052",
+        "address": "Humber Bay",
+        "coordinates": [
+            43.629959259259,
+            -79.491192592593
+        ]
+    },
+    {
+        "id": "LIB053",
+        "address": "Humber Summit",
+        "coordinates": [
+            43.758981481481,
+            -79.571518518519
+        ]
+    },
+    {
+        "id": "LIB054",
+        "address": "Humberwood",
+        "coordinates": [
+            43.728996296296,
+            -79.619162962963
+        ]
+    },
+    {
+        "id": "LIB055",
+        "address": "Jane\/Dundas",
+        "coordinates": [
+            43.66547037037,
+            -79.491414814815
+        ]
+    },
+    {
+        "id": "LIB056",
+        "address": "Jane\/Sheppard",
+        "coordinates": [
+            43.73988,
+            -79.51005
+        ]
+    },
+    {
+        "id": "LIB057",
+        "address": "Jones",
+        "coordinates": [
+            43.665951851852,
+            -79.334496296296
+        ]
+    },
+    {
+        "id": "LIB138",
+        "address": "Kennedy\/Eglinton",
+        "coordinates": [
+            43.732159259259,
+            -79.270496296296
+        ]
+    },
+    {
+        "id": "LIB059",
+        "address": "Leaside",
+        "coordinates": [
+            43.706492592593,
+            -79.367562962963
+        ]
+    },
+    {
+        "id": "LIB011",
+        "address": "Lillian H. Smith",
+        "coordinates": [
+            43.6581,
+            -79.3984
+        ]
+    },
+    {
+        "id": "LIB060",
+        "address": "Locke",
+        "coordinates": [
+            43.724877777778,
+            -79.401814814815
+        ]
+    },
+    {
+        "id": "LIB061",
+        "address": "Long Branch",
+        "coordinates": [
+            43.595262962963,
+            -79.531503703704
+        ]
+    },
+    {
+        "id": "LIB062",
+        "address": "Main Street",
+        "coordinates": [
+            43.683359259259,
+            -79.299577777778
+        ]
+    },
+    {
+        "id": "LIB012",
+        "address": "Malvern",
+        "coordinates": [
+            43.808314814815,
+            -79.216066666667
+        ]
+    },
+    {
+        "id": "LIB013",
+        "address": "Maria A. Shchuka",
+        "coordinates": [
+            43.69612962963,
+            -79.447192592593
+        ]
+    },
+    {
+        "id": "LIB063",
+        "address": "Maryvale",
+        "coordinates": [
+            43.757262962963,
+            -79.311711111111
+        ]
+    },
+    {
+        "id": "LIB064",
+        "address": "McGregor Park",
+        "coordinates": [
+            43.747707407407,
+            -79.280718518519
+        ]
+    },
+    {
+        "id": "LIB065",
+        "address": "Mimico Centennial",
+        "coordinates": [
+            43.614907407407,
+            -79.493903703704
+        ]
+    },
+    {
+        "id": "LIB066",
+        "address": "Morningside",
+        "coordinates": [
+            43.769885185185,
+            -79.178540740741
+        ]
+    },
+    {
+        "id": "LIB067",
+        "address": "Mount Dennis",
+        "coordinates": [
+            43.686581481481,
+            -79.488259259259
+        ]
+    },
+    {
+        "id": "LIB068",
+        "address": "Mount Pleasant",
+        "coordinates": [
+            43.7039,
+            -79.388125925926
+        ]
+    },
+    {
+        "id": "LIB069",
+        "address": "New Toronto",
+        "coordinates": [
+            43.599085185185,
+            -79.509740740741
+        ]
+    },
+    {
+        "id": "LIB01",
+        "address": "North York Central Library",
+        "coordinates": [
+            43.76807778,
+            -79.41424444
+        ]
+    },
+    {
+        "id": "LIB014",
+        "address": "Northern District",
+        "coordinates": [
+            43.708240740741,
+            -79.399874074074
+        ]
+    },
+    {
+        "id": "LIB070",
+        "address": "Northern Elms",
+        "coordinates": [
+            43.71132962963,
+            -79.565548148148
+        ]
+    },
+    {
+        "id": "LIB071",
+        "address": "Oakwood Village Library and Arts Centre",
+        "coordinates": [
+            43.686544444444,
+            -79.438111111111
+        ]
+    },
+    {
+        "id": "LIB072",
+        "address": "Palmerston",
+        "coordinates": [
+            43.665092592593,
+            -79.414051851852
+        ]
+    },
+    {
+        "id": "LIB015",
+        "address": "Pape\/Danforth",
+        "coordinates": [
+            43.678559259259,
+            -79.34457037037
+        ]
+    },
+    {
+        "id": "LIB073",
+        "address": "Parkdale",
+        "coordinates": [
+            43.641174074074,
+            -79.432659259259
+        ]
+    },
+    {
+        "id": "LIB074",
+        "address": "Parliament Street",
+        "coordinates": [
+            43.661803703704,
+            -79.3678
+        ]
+    },
+    {
+        "id": "LIB075",
+        "address": "Perth\/Dupont",
+        "coordinates": [
+            43.665033333333,
+            -79.45382962963
+        ]
+    },
+    {
+        "id": "LIB076",
+        "address": "Pleasant View",
+        "coordinates": [
+            43.787559259259,
+            -79.33542962963
+        ]
+    },
+    {
+        "id": "LIB077",
+        "address": "Port Union",
+        "coordinates": [
+            43.779477777778,
+            -79.140288888889
+        ]
+    },
+    {
+        "id": "LIB078",
+        "address": "Queen\/Saulter",
+        "coordinates": [
+            43.659144444444,
+            -79.347592592593
+        ]
+    },
+    {
+        "id": "LIB079",
+        "address": "Rexdale",
+        "coordinates": [
+            43.72612962963,
+            -79.573207407407
+        ]
+    },
+    {
+        "id": "LIB016",
+        "address": "Richview",
+        "coordinates": [
+            43.683403703704,
+            -79.541118518519
+        ]
+    },
+    {
+        "id": "LIB080",
+        "address": "Riverdale",
+        "coordinates": [
+            43.665759259259,
+            -79.353162962963
+        ]
+    },
+    {
+        "id": "LIB081",
+        "address": "Runnymede",
+        "coordinates": [
+            43.651855555556,
+            -79.473844444444
+        ]
+    },
+    {
+        "id": "LIB144",
+        "address": "Scarborough Civic Centre",
+        "coordinates": [
+            43.772096,
+            -79.256764
+        ]
+    },
+    {
+        "id": "LIB017",
+        "address": "S. Walter Stewart",
+        "coordinates": [
+            43.692114814815,
+            -79.329696296296
+        ]
+    },
+    {
+        "id": "LIB085",
+        "address": "Sanderson",
+        "coordinates": [
+            43.652085185185,
+            -79.405518518518
+        ]
+    },
+    {
+        "id": "LIB086",
+        "address": "Spadina Road",
+        "coordinates": [
+            43.667159259259,
+            -79.404377777778
+        ]
+    },
+    {
+        "id": "LIB082",
+        "address": "St. Clair\/Silverthorn",
+        "coordinates": [
+            43.674262962963,
+            -79.460585185185
+        ]
+    },
+    {
+        "id": "LIB083",
+        "address": "St. James Town",
+        "coordinates": [
+            43.667262962963,
+            -79.374466666667
+        ]
+    },
+    {
+        "id": "LIB084",
+        "address": "St. Lawrence",
+        "coordinates": [
+            43.649981481481,
+            -79.368496296296
+        ]
+    },
+    {
+        "id": "LIB087",
+        "address": "Steeles",
+        "coordinates": [
+            43.815381481481,
+            -79.322303703704
+        ]
+    },
+    {
+        "id": "LIB088",
+        "address": "Swansea Memorial",
+        "coordinates": [
+            43.64792962963,
+            -79.478022222222
+        ]
+    },
+    {
+        "id": "LIB089",
+        "address": "Taylor Memorial",
+        "coordinates": [
+            43.687781481481,
+            -79.271251851852
+        ]
+    },
+    {
+        "id": "LIB090",
+        "address": "Thorncliffe",
+        "coordinates": [
+            43.702907407407,
+            -79.342644444444
+        ]
+    },
+    {
+        "id": "LIB091",
+        "address": "Todmorden Room",
+        "coordinates": [
+            43.691625925926,
+            -79.349325925926
+        ]
+    },
+    {
+        "id": "LIB018",
+        "address": "Toronto Reference Library",
+        "coordinates": [
+            43.671737037037,
+            -79.386762962963
+        ]
+    },
+    {
+        "id": "LIB092",
+        "address": "Victoria Village",
+        "coordinates": [
+            43.736011111111,
+            -79.312911111111
+        ]
+    },
+    {
+        "id": "LIB093",
+        "address": "Weston",
+        "coordinates": [
+            43.701796296296,
+            -79.520585185185
+        ]
+    },
+    {
+        "id": "LIB094",
+        "address": "Woodside Square",
+        "coordinates": [
+            43.809462962963,
+            -79.269548148148
+        ]
+    },
+    {
+        "id": "LIB095",
+        "address": "Woodview Park",
+        "coordinates": [
+            43.739722222222,
+            -79.538940740741
+        ]
+    },
+    {
+        "id": "LIB096",
+        "address": "Wychwood",
+        "coordinates": [
+            43.682181481481,
+            -79.417548148148
+        ]
+    },
+    {
+        "id": "LIB019",
+        "address": "York Woods",
+        "coordinates": [
+            43.758892592593,
+            -79.507266666667
+        ]
+    },
+    {
+        "id": "LIB097",
+        "address": "Yorkville",
+        "coordinates": [
+            43.671825925926,
+            -79.388644444444
+        ]
+    }
+]
