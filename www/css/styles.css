@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif; 
+}
+
+header {
+    height: 96px;
+    background: rgb(255, 181, 0);
+    font-size: 24px;
+    line-height: 48px;
+    font-weight: bold;
+}
+
+#mapid {
+    height: 100%;
+    width: 100%;
+}
+
+.my-div-icon {
+   border: 2px solid rgba(0, 0, 0, 0.4); 
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.verified-div-icon {
+   border: 2px solid rgba(0, 0, 0, 0.4); 
+    background: rgb(90, 95, 155);
+    border-radius: 50%;
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.zoom11 .verified-div-icon,
+.zoom11 .my-div-icon {
+    width: 4px !important;
+    height: 4px !important;
+}
+
+.zoom12 .verified-div-icon,
+.zoom13 .verified-div-icon,
+.zoom12 .my-div-icon,
+.zoom13 .my-div-icon {
+    width: 10px !important;
+    height: 10px !important;
+}
+
+
+.leaflet-popup-content-wrapper {
+    border-radius: 4px;
+}
+
+.leaflet-popup-content {
+}
+
+
+
+.leaflet-container
+a.leaflet-popup-close-button {
+}
+
+
+.leaflet-popup-content-wrapper {
+}
+
+.leaflet-popup-tip-container {
+}
+
+div#search {
+  background-color: white;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  z-index: 999;
+}
+div#search input {
+  width: 200px;
+}
+div#results {
+  font-style: sans-serif;
+  color: black;
+  font-size: 75%;
+}
