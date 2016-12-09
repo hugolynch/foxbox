@@ -31,7 +31,7 @@ foreach ($db as &$library) {
 unset($library);
 
 
-$r = json_encode($db);
+$r = json_encode($db,  JSON_PRETTY_PRINT);
 $result = file_put_contents("./libraries.json", $r);
 
 
