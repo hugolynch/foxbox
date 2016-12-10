@@ -1,13 +1,6 @@
 var feature;
 
-var mymap = L.map('mapid').setView([43.671775, -79.334912], 13);
-
-L.tileLayer('https://api.mapbox.com/styles/v1/hugolynch/ciw1168ie003k2kr33r5p963z/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaHVnb2x5bmNoIiwiYSI6ImNpdzEwbHc1YTA5Mm8yb3BiOHR5eHB5YWIifQ.9Gkbywr6-VD6cEJrUneNBA', {
-    attribution: '',
-    minZoom: 11,
-    maxZoom: 18 
-}).addTo(mymap);
-
+var mymap = L.map('mapid', {zoomControl: false}).setView([43.671775, -79.334912], 13);
 
 mymap.setMaxBounds([
     [43.89146, -79.69002],
@@ -19,14 +12,18 @@ mymap.setMaxBounds([
 var myIcon = L.divIcon({
     className: 'my-div-icon',
     iconAnchor: [10, 4]
-
 });
 
 var verifiedIcon = L.divIcon({
     className: 'verified-div-icon',
     iconAnchor: [10, 4]
-
 });
+
+var tplIcon = L.divIcon({
+    className: 'tpl-div-icon',
+    iconAnchor: [10, 4]
+});
+
 
 var lfl = L.layerGroup();
 var tpl = L.layerGroup();
@@ -85,12 +82,7 @@ $.getJSON('tpl.json', function(data) {
         };
 
         var tooltipContent = L.Util.template(tooltipTemplate, tooltipData); 
-
-        if (library.verified) {
-            icon = verifiedIcon;
-        } else {
-            icon = myIcon;
-        }
+        icon = tplIcon;
 
         L.marker(library.coordinates, {icon: icon})
             .addTo(tpl)
@@ -98,13 +90,26 @@ $.getJSON('tpl.json', function(data) {
     });
 });
 
+L.tileLayer('https://api.mapbox.com/styles/v1/hugolynch/ciw1168ie003k2kr33r5p963z/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaHVnb2x5bmNoIiwiYSI6ImNpdzEwbHc1YTA5Mm8yb3BiOHR5eHB5YWIifQ.9Gkbywr6-VD6cEJrUneNBA', {
+    attribution: '',
+    minZoom: 11,
+    maxZoom: 18,
 
-L.control.layers({
-    'Public Libraries': tpl,
-    'Free Little Libraries': lfl,
 }).addTo(mymap);
 
 
+
+var overlays = {
+    'Public Libraries': tpl,
+    'Free Little Libraries': lfl
+};
+
+L.control.layers(null, overlays, {position: 'bottomright'}).addTo(mymap);
+
+tpl.addTo(mymap);
+lfl.addTo(mymap);
+
+L.control.zoom({position: 'bottomleft'}).addTo(mymap);
 
 
 
