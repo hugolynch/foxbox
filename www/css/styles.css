@@ -26,7 +26,7 @@ header {
 
 .verified-div-icon {
    border: 2px solid rgba(0, 0, 0, 0.4); 
-    background: rgb(90, 95, 155);
+    background: #F65619;
     border-radius: 50%;
     width: 16px !important;
     height: 16px !important;
@@ -34,7 +34,7 @@ header {
 
 .tpl-div-icon {
     border: 2px solid rgba(0, 0, 0, 0.4); 
-    background: #001c71;
+    background: #1765A9;
     border-radius: 50%;
     width: 16px !important;
     height: 16px !important;
@@ -118,4 +118,8 @@ div#logo {
   z-index: 9999;
 }
 
+.icon {
+    vertical-align: middle;
+    padding: 3px;
+}
 

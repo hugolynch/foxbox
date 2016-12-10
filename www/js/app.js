@@ -37,10 +37,11 @@ $.getJSON('lfl.json', function(data) {
         if (library.image) {
             tooltipTemplate += '<br/><img width="150px" src="images/{image}"/>';
         } else {
-            tooltipTemplate += '<br/><a href="#"><img src="images/ic_add_a_photo_black_24px.svg"/>Add a photo</a>';
-            tooltipTemplate += '<form action="save.php" method="post" enctype="multipart/form-data">';
+            tooltipTemplate += '<br/><a href="#"><img class="icon" src="images/ic_add_a_photo_black_24px.svg"/>Add a photo</a>';
+            tooltipTemplate += '<form class="photo-add" action="save.php" method="post" enctype="multipart/form-data">';
             tooltipTemplate += '<input type="hidden" name="action" value="photo"/>';
-            tooltipTemplate += '<input type="file" name="photo"/><input type="hidden" name="address" value="{address}"/>';
+            tooltipTemplate += '<input type="hidden" name="address" value="{address}"/>';
+            tooltipTemplate += '<input type="file" required name="photo"/>';
             tooltipTemplate += '<button type="submit">Save</button></form>';
         }
 
@@ -100,8 +101,8 @@ L.tileLayer('https://api.mapbox.com/styles/v1/hugolynch/ciw1168ie003k2kr33r5p963
 
 
 var overlays = {
-    'Public Libraries': tpl,
-    'Free Little Libraries': lfl
+    'Toronto Public Libraries': tpl,
+    'Library Boxes': lfl
 };
 
 L.control.layers(null, overlays, {position: 'bottomright'}).addTo(mymap);
