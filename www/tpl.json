@@ -1,0 +1,701 @@
+[{
+    "id": "LIB02",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB02",
+    "name": "Agincourt",
+    "address": "155 Bonis Ave.",
+    "coordinates": [43.78516666666665, -79.29342962962961]
+    },{
+    "id": "LIB03",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB03",
+    "name": "Albert Campbell",
+    "address": "496 Birchmount Road",
+    "coordinates": [43.708018518518514, -79.26925185185183]
+    },{
+    "id": "LIB04",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB04",
+    "name": "Albion",
+    "address": "1515 Albion Road",
+    "coordinates": [43.7398259259259, -79.58409629629628]
+    },{
+    "id": "LIB020",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB020",
+    "name": "Alderwood",
+    "address": "2 Orianna Drive",
+    "coordinates": [43.60194444444441, -79.54725185185184]
+    },{
+    "id": "LIB021",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB021",
+    "name": "Amesbury Park",
+    "address": "1565 Lawrence Ave. W.",
+    "coordinates": [43.706455555555536, -79.4857259259259]
+    },{
+    "id": "LIB022",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB022",
+    "name": "Annette Street",
+    "address": "145 Annette Street",
+    "coordinates": [43.66335925925924, -79.46634814814814]
+    },{
+    "id": "LIB023",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB023",
+    "name": "Armour Heights",
+    "address": "2140 Avenue Road",
+    "coordinates": [43.73933703703702, -79.42188888888888]
+    },{
+    "id": "LIB05",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB05",
+    "name": "Barbara Frum",
+    "address": "20 Covington Road",
+    "coordinates": [43.72075185185185, -79.43221481481477]
+    },{
+    "id": "LIB024",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB024",
+    "name": "Bayview",
+    "address": "2901 Bayview Ave., Bayview Village Shopping Centre",
+    "coordinates": [43.76885555555552, -79.38499999999999]
+    },{
+    "id": "LIB025",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB025",
+    "name": "Beaches",
+    "address": "2161 Queen Street East",
+    "coordinates": [43.670129629629606, -79.29852592592593]
+    },{
+    "id": "LIB026",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB026",
+    "name": "Bendale",
+    "address": "1515 Danforth Road",
+    "coordinates": [43.75106296296295, -79.24405185185185]
+    },{
+    "id": "LIB027",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB027",
+    "name": "Black Creek",
+    "address": "1700 Wilson Ave., North York Sheridan Mall",
+    "coordinates": [43.72121851851851, -79.51046666666666]
+    },{
+    "id": "LIB06",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB06",
+    "name": "Bloor/Gladstone",
+    "address": "1101 Bloor Street West",
+    "coordinates": [43.659877777777766, -79.43402222222222]
+    },{
+    "id": "LIB07",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB07",
+    "name": "Brentwood",
+    "address": "36 Brentwood Road North",
+    "coordinates": [43.64744814814814, -79.51425925925925]
+    },{
+    "id": "LIB028",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB028",
+    "name": "Bridlewood",
+    "address": "2900 Warden Ave., Bridlewood Mall",
+    "coordinates": [43.79714444444444, -79.31777037037037]
+    },{
+    "id": "LIB029",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB029",
+    "name": "Brookbanks",
+    "address": "210 Brookbanks Dr.",
+    "coordinates": [43.7595074074074, -79.32590370370369]
+    },{
+    "id": "LIB030",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB030",
+    "name": "Burrows Hall",
+    "address": "1081 Progress Ave.",
+    "coordinates": [43.79388518518518, -79.23422962962961]
+    },{
+    "id": "LIB08",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB08",
+    "name": "Cedarbrae",
+    "address": "545 Markham Road",
+    "coordinates": [43.75752962962963, -79.22396296296296]
+    },{
+    "id": "LIB031",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB031",
+    "name": "Centennial",
+    "address": "578 Finch Ave. West",
+    "coordinates": [43.77298888888886, -79.44957777777775]
+    },{
+    "id": "LIB032",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB032",
+    "name": "City Hall",
+    "address": "100 Queen Street West, Nathan Phillips Square",
+    "coordinates": [43.65336666666666, -79.38399259259257]
+    },{
+    "id": "LIB033",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB033",
+    "name": "Cliffcrest",
+    "address": "3017 Kingston Road",
+    "coordinates": [43.72517, -79.23077]
+    },{
+    "id": "LIB034",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB034",
+    "name": "College/Shaw",
+    "address": "766 College Street",
+    "coordinates": [43.65515925925925, -79.4201111111111]
+    },{
+    "id": "LIB035",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB035",
+    "name": "Danforth/Coxwell",
+    "address": "1675 Danforth Ave.",
+    "coordinates": [43.683574074074066, -79.32139999999998]
+    },{
+    "id": "LIB036",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB036",
+    "name": "Davenport",
+    "address": "1246 Shaw Street",
+    "coordinates": [43.67452962962962, -79.42845185185184]
+    },{
+    "id": "LIB037",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB037",
+    "name": "Dawes Road",
+    "address": "416 Dawes Road",
+    "coordinates": [43.70117407407407, -79.29732592592592]
+    },{
+    "id": "LIB038",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB038",
+    "name": "Deer Park",
+    "address": "40 St. Clair Ave. E.",
+    "coordinates": [43.68858148148147, -79.39248148148147]
+    },{
+    "id": "LIB09",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB09",
+    "name": "Don Mills",
+    "address": "888 Lawrence Ave. East",
+    "coordinates": [43.73664074074071, -79.34734074074075]
+    },{
+    "id": "LIB039",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB039",
+    "name": "Downsview",
+    "address": "2793 Keele Street",
+    "coordinates": [43.72887037037032, -79.48205185185185]
+    },{
+    "id": "LIB040",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB040",
+    "name": "Dufferin/St. Clair",
+    "address": "1625 Dufferin Street",
+    "coordinates": [43.67692962962961, -79.4424074074074]
+    },{
+    "id": "LIB041",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB041",
+    "name": "Eatonville",
+    "address": "430 Burnhamthorpe Road",
+    "coordinates": [43.6461222222222, -79.55916296296293]
+    },{
+    "id": "LIB042",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB042",
+    "name": "Eglinton Square",
+    "address": "1 Eglinton Square, Unit 126, Eglinton Square Shopping Centre",
+    "coordinates": [43.723685185185175, -79.30033333333333]
+    },{
+    "id": "LIB043",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB043",
+    "name": "Elmbrook Park",
+    "address": "2 Elmbrook Cres.",
+    "coordinates": [43.6601222222222, -79.58384444444444]
+    },{
+    "id": "LIB044",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB044",
+    "name": "Evelyn Gregory",
+    "address": "120 Trowell Ave.",
+    "coordinates": [43.68618888888887, -79.47234814814814]
+    },{
+    "id": "LIB010",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB010",
+    "name": "Fairview",
+    "address": "35 Fairview Mall Dr.",
+    "coordinates": [43.77902592592591, -79.34664444444443]
+    },{
+    "id": "LIB045",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB045",
+    "name": "Flemingdon Park",
+    "address": "29 St. Dennis Dr.",
+    "coordinates": [43.717811111111104, -79.33175555555552]
+    },{
+    "id": "LIB046",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB046",
+    "name": "Forest Hill",
+    "address": "700 Eglinton Ave. West",
+    "coordinates": [43.702366666666634, -79.42057037037035]
+    },{
+    "id": "LIB140",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB140",
+    "name": "Fort York",
+    "address": "190 Fort York Boulevard",
+    "coordinates": [43.6393204, -79.4003296]
+    },{
+    "id": "LIB047",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB047",
+    "name": "Gerrard/Ashdale",
+    "address": "1432 Gerrard Street East",
+    "coordinates": [43.67246296296294, -79.3221259259259]
+    },{
+    "id": "LIB048",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB048",
+    "name": "Goldhawk Park",
+    "address": "295 Alton Towers Circle",
+    "coordinates": [43.82397407407406, -79.27799259259261]
+    },{
+    "id": "LIB139",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB139",
+    "name": "Guildwood",
+    "address": "123 Guildwood Parkway, Guildwood Plaza",
+    "coordinates": [43.74667037037035, -79.1998888888889]
+    },{
+    "id": "LIB049",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB049",
+    "name": "High Park",
+    "address": "228 Roncesvalles Ave.",
+    "coordinates": [43.645203703703686, -79.44898518518518]
+    },{
+    "id": "LIB050",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB050",
+    "name": "Highland Creek",
+    "address": "3550 Ellesmere Road",
+    "coordinates": [43.789959259259255, -79.17520740740741]
+    },{
+    "id": "LIB051",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB051",
+    "name": "Hillcrest",
+    "address": "5801 Leslie Street",
+    "coordinates": [43.797025925925915, -79.36904444444444]
+    },{
+    "id": "LIB052",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB052",
+    "name": "Humber Bay",
+    "address": "200 Park Lawn Road",
+    "coordinates": [43.62995925925924, -79.4911925925926]
+    },{
+    "id": "LIB053",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB053",
+    "name": "Humber Summit",
+    "address": "2990 Islington Ave.",
+    "coordinates": [43.75898148148147, -79.57151851851851]
+    },{
+    "id": "LIB054",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB054",
+    "name": "Humberwood",
+    "address": "850 Humberwood Blvd.",
+    "coordinates": [43.72899629629626, -79.61916296296296]
+    },{
+    "id": "LIB055",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB055",
+    "name": "Jane/Dundas",
+    "address": "620 Jane Street",
+    "coordinates": [43.66547037037034, -79.49141481481482]
+    },{
+    "id": "LIB056",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB056",
+    "name": "Jane/Sheppard",
+    "address": "1906 Sheppard Ave West",
+    "coordinates": [43.73988, -79.51005]
+    },{
+    "id": "LIB057",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB057",
+    "name": "Jones",
+    "address": "118 Jones Ave.",
+    "coordinates": [43.66595185185183, -79.3344962962963]
+    },{
+    "id": "LIB138",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB138",
+    "name": "Kennedy/Eglinton",
+    "address": "2380 Eglinton Ave. East, Liberty Square Plaza",
+    "coordinates": [43.73215925925921, -79.27049629629628]
+    },{
+    "id": "LIB059",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB059",
+    "name": "Leaside",
+    "address": "165 McRae Dr.",
+    "coordinates": [43.70649259259256, -79.36756296296295]
+    },{
+    "id": "LIB011",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB011",
+    "name": "Lillian H. Smith",
+    "address": "239 College Street",
+    "coordinates": [43.6581, -79.3984]
+    },{
+    "id": "LIB060",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB060",
+    "name": "Locke",
+    "address": "3083 Yonge Street",
+    "coordinates": [43.72487777777776, -79.40181481481482]
+    },{
+    "id": "LIB061",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB061",
+    "name": "Long Branch",
+    "address": "3500 Lake Shore Blvd. West",
+    "coordinates": [43.59526296296294, -79.5315037037037]
+    },{
+    "id": "LIB062",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB062",
+    "name": "Main Street",
+    "address": "137 Main Street",
+    "coordinates": [43.68335925925925, -79.29957777777775]
+    },{
+    "id": "LIB012",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB012",
+    "name": "Malvern",
+    "address": "30 Sewells Road",
+    "coordinates": [43.808314814814814, -79.21606666666663]
+    },{
+    "id": "LIB013",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB013",
+    "name": "Maria A. Shchuka",
+    "address": "1745 Eglinton Avenue W",
+    "coordinates": [43.69612962962959, -79.44719259259258]
+    },{
+    "id": "LIB063",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB063",
+    "name": "Maryvale",
+    "address": "85 Ellesmere Road, Unit 16, Parkway Mall",
+    "coordinates": [43.757262962962955, -79.3117111111111]
+    },{
+    "id": "LIB064",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB064",
+    "name": "McGregor Park",
+    "address": "2219 Lawrence Ave. East",
+    "coordinates": [43.747707407407404, -79.28071851851852]
+    },{
+    "id": "LIB065",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB065",
+    "name": "Mimico Centennial",
+    "address": "47 Station Road",
+    "coordinates": [43.61490740740739, -79.49390370370371]
+    },{
+    "id": "LIB066",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB066",
+    "name": "Morningside",
+    "address": "4279 Lawrence Ave. East",
+    "coordinates": [43.76988518518516, -79.17854074074076]
+    },{
+    "id": "LIB067",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB067",
+    "name": "Mount Dennis",
+    "address": "1123 Weston Road",
+    "coordinates": [43.686581481481475, -79.48825925925925]
+    },{
+    "id": "LIB068",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB068",
+    "name": "Mount Pleasant",
+    "address": "599 Mt. Pleasant Road",
+    "coordinates": [43.703899999999976, -79.38812592592595]
+    },{
+    "id": "LIB069",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB069",
+    "name": "New Toronto",
+    "address": "110 Eleventh Street",
+    "coordinates": [43.599085185185174, -79.50974074074074]
+    },{
+    "id": "LIB01",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB01",
+    "name": "North York Central Library",
+    "address": "5120 Yonge Street",
+    "coordinates": [43.76807778, -79.41424444]
+    },{
+    "id": "LIB014",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB014",
+    "name": "Northern District",
+    "address": "40 Orchard View Blvd.",
+    "coordinates": [43.708240740740706, -79.39987407407408]
+    },{
+    "id": "LIB070",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB070",
+    "name": "Northern Elms",
+    "address": "123B Rexdale Blvd., Unit 5",
+    "coordinates": [43.71132962962962, -79.56554814814814]
+    },{
+    "id": "LIB071",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB071",
+    "name": "Oakwood Village Library and Arts Centre",
+    "address": "341 Oakwood Ave.",
+    "coordinates": [43.68654444444444, -79.4381111111111]
+    },{
+    "id": "LIB072",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB072",
+    "name": "Palmerston",
+    "address": "560 Palmerston Ave.",
+    "coordinates": [43.66509259259255, -79.41405185185185]
+    },{
+    "id": "LIB015",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB015",
+    "name": "Pape/Danforth",
+    "address": "701 Pape Ave.",
+    "coordinates": [43.67855925925923, -79.34457037037036]
+    },{
+    "id": "LIB073",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB073",
+    "name": "Parkdale",
+    "address": "1303 Queen Street West",
+    "coordinates": [43.64117407407406, -79.43265925925925]
+    },{
+    "id": "LIB074",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB074",
+    "name": "Parliament Street",
+    "address": "269 Gerrard Street East",
+    "coordinates": [43.66180370370367, -79.36779999999999]
+    },{
+    "id": "LIB075",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB075",
+    "name": "Perth/Dupont",
+    "address": "1589 Dupont Street",
+    "coordinates": [43.6650333333333, -79.45382962962962]
+    },{
+    "id": "LIB076",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB076",
+    "name": "Pleasant View",
+    "address": "575 Van Horne Ave.",
+    "coordinates": [43.787559259259254, -79.33542962962961]
+    },{
+    "id": "LIB077",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB077",
+    "name": "Port Union",
+    "address": "5450 Lawrence Ave. East",
+    "coordinates": [43.77947777777776, -79.14028888888889]
+    },{
+    "id": "LIB078",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB078",
+    "name": "Queen/Saulter",
+    "address": "765 Queen Street East",
+    "coordinates": [43.65914444444443, -79.34759259259259]
+    },{
+    "id": "LIB079",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB079",
+    "name": "Rexdale",
+    "address": "2243 Kipling Avenue",
+    "coordinates": [43.72612962962962, -79.57320740740741]
+    },{
+    "id": "LIB016",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB016",
+    "name": "Richview",
+    "address": "1806 Islington Ave.",
+    "coordinates": [43.68340370370369, -79.5411185185185]
+    },{
+    "id": "LIB080",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB080",
+    "name": "Riverdale",
+    "address": "370 Broadview Ave.",
+    "coordinates": [43.66575925925923, -79.35316296296295]
+    },{
+    "id": "LIB081",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB081",
+    "name": "Runnymede",
+    "address": "2178 Bloor Street West",
+    "coordinates": [43.65185555555554, -79.47384444444442]
+    },{
+    "id": "LIB144",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB144",
+    "name": "Scarborough Civic Centre",
+    "address": "156 Borough Dr.",
+    "coordinates": [43.7720960, -79.2567640]
+    },{
+    "id": "LIB017",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB017",
+    "name": "S. Walter Stewart",
+    "address": "170 Memorial Park Ave.",
+    "coordinates": [43.6921148148148, -79.32969629629627]
+    },{
+    "id": "LIB085",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB085",
+    "name": "Sanderson",
+    "address": "327 Bathurst Street",
+    "coordinates": [43.65208518518517, -79.40551851851849]
+    },{
+    "id": "LIB086",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB086",
+    "name": "Spadina Road",
+    "address": "10 Spadina Road",
+    "coordinates": [43.66715925925923, -79.40437777777778]
+    },{
+    "id": "LIB082",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB082",
+    "name": "St. Clair/Silverthorn",
+    "address": "1748 St. Clair Ave. West",
+    "coordinates": [43.674262962962956, -79.4605851851852]
+    },{
+    "id": "LIB083",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB083",
+    "name": "St. James Town",
+    "address": "495 Sherbourne Street",
+    "coordinates": [43.667262962962944, -79.37446666666666]
+    },{
+    "id": "LIB084",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB084",
+    "name": "St. Lawrence",
+    "address": "171 Front Street East",
+    "coordinates": [43.64998148148147, -79.36849629629628]
+    },{
+    "id": "LIB087",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB087",
+    "name": "Steeles",
+    "address": "Bamburgh Gardens Shopping Plaza, C107-375 Bamburgh Circle",
+    "coordinates": [43.81538148148147, -79.32230370370368]
+    },{
+    "id": "LIB088",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB088",
+    "name": "Swansea Memorial",
+    "address": "95 Lavinia Ave.",
+    "coordinates": [43.64792962962962, -79.47802222222221]
+    },{
+    "id": "LIB089",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB089",
+    "name": "Taylor Memorial",
+    "address": "1440 Kingston Road",
+    "coordinates": [43.68778148148149, -79.27125185185186]
+    },{
+    "id": "LIB090",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB090",
+    "name": "Thorncliffe",
+    "address": "48 Thorncliffe Park Dr.",
+    "coordinates": [43.70290740740739, -79.34264444444442]
+    },{
+    "id": "LIB091",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB091",
+    "name": "Todmorden Room",
+    "address": "1081 1/2 Pape Ave (at Torrens)",
+    "coordinates": [43.691625925925905, -79.34932592592591]
+    },{
+    "id": "LIB018",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB018",
+    "name": "Toronto Reference Library",
+    "address": "789 Yonge Street",
+    "coordinates": [43.671737037037005, -79.38676296296297]
+    },{
+    "id": "LIB092",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB092",
+    "name": "Victoria Village",
+    "address": "184 Sloane Ave.",
+    "coordinates": [43.736011111111075, -79.3129111111111]
+    },{
+    "id": "LIB093",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB093",
+    "name": "Weston",
+    "address": "2 King Street",
+    "coordinates": [43.701796296296266, -79.52058518518517]
+    },{
+    "id": "LIB094",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB094",
+    "name": "Woodside Square",
+    "address": "Woodside Square Mall, 1571 Sandhurst Circle",
+    "coordinates": [43.809462962962954, -79.26954814814812]
+    },{
+    "id": "LIB095",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB095",
+    "name": "Woodview Park",
+    "address": "16 Bradstock Road",
+    "coordinates": [43.7397222222222, -79.53894074074073]
+    },{
+    "id": "LIB096",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB096",
+    "name": "Wychwood",
+    "address": "1431 Bathurst Street",
+    "coordinates": [43.682181481481464, -79.41754814814814]
+    },{
+    "id": "LIB019",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB019",
+    "name": "York Woods",
+    "address": "1785 Finch Ave. West",
+    "coordinates": [43.758892592592574, -79.50726666666665]
+    },{
+    "id": "LIB097",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=LIB097",
+    "name": "Yorkville",
+    "address": "22 Yorkville Ave.",
+    "coordinates": [43.6718259259259, -79.38864444444445]
+    }]

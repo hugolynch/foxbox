@@ -28,42 +28,81 @@ var verifiedIcon = L.divIcon({
 
 });
 
+var lfl = L.layerGroup();
+var tpl = L.layerGroup();
 
-var libraries;
-$.getJSON('libraries.json', function(data) {
-    libraries = data;
-libraries.forEach(function(library) {
 
-    var tooltipTemplate =  '{address}';
-    if (library.image) {
-        tooltipTemplate += '<br/><img width="150px" src="images/{image}"/>';
-    } else {
-        tooltipTemplate += '<br/><a href="#"><img src="images/ic_add_a_photo_black_24px.svg"/>Add a photo</a>';
-        tooltipTemplate += '<form action="save.php" method="post" enctype="multipart/form-data">';
-        tooltipTemplate += '<input type="hidden" name="action" value="photo"/>';
-        tooltipTemplate += '<input type="file" name="photo"/><input type="hidden" name="address" value="{address}"/>';
-        tooltipTemplate += '<button type="submit">Save</button></form>';
-    }
 
-    var tooltipData = {  
-        address: library.address,
-        image: library.image
-    };
+$.getJSON('lfl.json', function(data) {
+    data.forEach(function(library) {
 
-    var tooltipContent = L.Util.template(tooltipTemplate, tooltipData); 
+        var tooltipTemplate =  '{address}';
+        if (library.image) {
+            tooltipTemplate += '<br/><img width="150px" src="images/{image}"/>';
+        } else {
+            tooltipTemplate += '<br/><a href="#"><img src="images/ic_add_a_photo_black_24px.svg"/>Add a photo</a>';
+            tooltipTemplate += '<form action="save.php" method="post" enctype="multipart/form-data">';
+            tooltipTemplate += '<input type="hidden" name="action" value="photo"/>';
+            tooltipTemplate += '<input type="file" name="photo"/><input type="hidden" name="address" value="{address}"/>';
+            tooltipTemplate += '<button type="submit">Save</button></form>';
+        }
 
-    if (library.verified) {
-        icon = verifiedIcon;
-    } else {
-        icon = myIcon;
-    }
+        var tooltipData = {  
+            address: library.address,
+            image: library.image
+        };
 
-    L.marker(library.coordinates, {icon: icon})
-        .addTo(mymap)
-        .bindPopup(tooltipContent);
+        var tooltipContent = L.Util.template(tooltipTemplate, tooltipData); 
+
+        if (library.verified) {
+            icon = verifiedIcon;
+        } else {
+            icon = myIcon;
+        }
+
+        L.marker(library.coordinates, {icon: icon})
+            .addTo(lfl)
+            .bindPopup(tooltipContent);
+    });
 });
 
+
+$.getJSON('tpl.json', function(data) {
+    data.forEach(function(library) {
+
+        var tooltipTemplate =  '<strong>Toronto Public Library</strong><br/>';
+        tooltipTemplate +=  '<strong><a href="{url}">{name} Branch</a></strong>';
+        tooltipTemplate +=  '<br/>{address}';
+        if (library.image) {
+            tooltipTemplate += '<br/><img width="150px" src="images/{image}"/>';
+        }
+
+        var tooltipData = {  
+            name: library.name,
+            address: library.address,
+            url: library.url,
+            image: library.image
+        };
+
+        var tooltipContent = L.Util.template(tooltipTemplate, tooltipData); 
+
+        if (library.verified) {
+            icon = verifiedIcon;
+        } else {
+            icon = myIcon;
+        }
+
+        L.marker(library.coordinates, {icon: icon})
+            .addTo(tpl)
+            .bindPopup(tooltipContent);
+    });
 });
+
+
+L.control.layers({
+    'Public Libraries': tpl,
+    'Free Little Libraries': lfl,
+}).addTo(mymap);
 
 
 
