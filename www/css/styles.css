@@ -67,6 +67,17 @@ a.leaflet-popup-close-button {
 .leaflet-popup-tip-container {
 }
 
+div#add {
+  background-color: white;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  z-index: 999;
+}
+
 div#search {
   background-color: white;
   position: absolute;
@@ -77,6 +88,8 @@ div#search {
   padding: 10px;
   z-index: 999;
 }
+
+
 div#search input {
   width: 200px;
 }

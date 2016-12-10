@@ -40,7 +40,8 @@ libraries.forEach(function(library) {
     } else {
         tooltipTemplate += '<br/><a href="#"><img src="images/ic_add_a_photo_black_24px.svg"/>Add a photo</a>';
         tooltipTemplate += '<form action="save.php" method="post" enctype="multipart/form-data">';
-        tooltipTemplate += '<input type="file" name="photo"/><input type="hidden" name="loc" value="{address}"/>';
+        tooltipTemplate += '<input type="hidden" name="action" value="photo"/>';
+        tooltipTemplate += '<input type="file" name="photo"/><input type="hidden" name="address" value="{address}"/>';
         tooltipTemplate += '<button type="submit">Save</button></form>';
     }
 
