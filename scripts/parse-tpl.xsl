@@ -5,6 +5,9 @@
     xmlns:kml="http://www.opengis.net/kml/2.2"
 >
 
+
+<xsl:output method="text" indent="no"/>
+
 <!--
 <Placemark id="LIB02">
 <name>Agincourt</name>
@@ -17,14 +20,14 @@
 </Placemark>
 -->
 
-<xsl:template match="/kml:Document">
-[
+<xsl:template match="kml:Document">
+    <xsl:text>[</xsl:text>
 	<xsl:apply-templates select="kml:Placemark"/>
-]
+    <xsl:text>]</xsl:text>
 </xsl:template>
 
 <xsl:template match="kml:Placemark">
-{
+    <xsl:text>{</xsl:text>
     "id": "<xsl:value-of select="@id"/>",
     "type": "tpl",
     "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=<xsl:value-of select="@id"/>",
@@ -33,7 +36,10 @@
     "coordinates": [<xsl:value-of
         select="substring-after(kml:Point/kml:coordinates, ',')"/>, <xsl:value-of
         select="substring-before(kml:Point/kml:coordinates, ',')"/>]
-},
+    <xsl:text>}</xsl:text>
+    <xsl:if test="position() != last()">
+        <xsl:text>,</xsl:text>
+    </xsl:if>
 </xsl:template>
 
 

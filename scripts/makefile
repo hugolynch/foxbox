@@ -1,3 +1,3 @@
 tpl:
-	xsltproc split.xsl ../data/tpl.xml
+	xsltproc parse-tpl.xsl ../data/tpl.xml
 
