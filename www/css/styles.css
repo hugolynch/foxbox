@@ -32,6 +32,15 @@ header {
     height: 16px !important;
 }
 
+.tpl-div-icon {
+    border: 2px solid rgba(0, 0, 0, 0.4); 
+    background: #001c71;
+    border-radius: 50%;
+    width: 16px !important;
+    height: 16px !important;
+}
+
+
 .zoom11 .verified-div-icon,
 .zoom11 .my-div-icon {
     width: 4px !important;
@@ -76,14 +85,15 @@ div#add {
   height: auto;
   padding: 10px;
   z-index: 999;
+display: none;
 }
 
 div#search {
   background-color: white;
   position: absolute;
-  bottom: 40px;
-  left: 40px;
-  width: auto;
+  top: 0px;
+  left: 0px;
+  width: 100%;
   height: auto;
   padding: 10px;
   z-index: 999;
@@ -98,3 +108,14 @@ div#results {
   color: black;
   font-size: 75%;
 }
+
+div#logo {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: auto;
+  height: auto;
+  z-index: 9999;
+}
+
+
