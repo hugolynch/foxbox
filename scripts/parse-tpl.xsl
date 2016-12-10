@@ -26,7 +26,10 @@
 <xsl:template match="kml:Placemark">
 {
     "id": "<xsl:value-of select="@id"/>",
-    "address": "<xsl:value-of select="kml:name"/>",
+    "type": "tpl",
+    "url": "http://www.torontopubliclibrary.ca/detail.jsp?R=<xsl:value-of select="@id"/>",
+    "name": "<xsl:value-of select="kml:name"/>",
+    "address": "<xsl:value-of select="substring-after(substring-before(kml:description, ', Toronto,'), 'Address: ')"/>",
     "coordinates": [<xsl:value-of
         select="substring-after(kml:Point/kml:coordinates, ',')"/>, <xsl:value-of
         select="substring-before(kml:Point/kml:coordinates, ',')"/>]
