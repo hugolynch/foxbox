@@ -2,7 +2,7 @@
     {
         "address": "56 Walpole Ave.",
         "coordinates": [
-             43.67464,
+            43.67464,
             -79.32735
         ],
         "verified": true,
@@ -11,8 +11,8 @@
     {
         "address": "37 Myrtle Ave.",
         "coordinates": [
-            43.671775,
-            -79.334912
+            43.67182088783,
+            -79.334902752866
         ],
         "image": "37myrtle.jpg",
         "verified": true
