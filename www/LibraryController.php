@@ -44,7 +44,7 @@ class LibraryController
 
     public function updateDb($address, $image)
     {
-        $db = json_decode(file_get_contents("./libraries.json"), true);
+        $db = json_decode(file_get_contents("./lfl.json"), true);
 
         foreach ($db as &$library) {
             if ($library['address'] == $address) {
@@ -54,12 +54,12 @@ class LibraryController
         unset($library);
 
         $r = json_encode($db,  JSON_PRETTY_PRINT);
-        $result = file_put_contents("./libraries.json", $r);
+        $result = file_put_contents("./lfl.json", $r);
     }
 
-    function saveToDb($address, $data)
+    public function saveToDb($address, $data)
     {
-        $db = json_decode(file_get_contents("./libraries.json"), true);
+        $db = json_decode(file_get_contents("./lfl.json"), true);
 
         $entry = [
             'address' => $address,
@@ -69,12 +69,12 @@ class LibraryController
 
         $r = json_encode($db,  JSON_PRETTY_PRINT);
 
-        $result = file_put_contents("./libraries.json", $r);
-        print_r($result);
+        $result = file_put_contents("./lfl.json", $r);
+        //print_r($result);
     }
 
 
-    function getCoords($address)
+    private function getCoords($address)
     {
 
         $address .= " Toronto";
@@ -116,4 +116,3 @@ class LibraryController
         return $text;
     }
 }
-
