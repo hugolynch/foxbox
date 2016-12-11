@@ -80,6 +80,7 @@ div#logo {
     border-radius: 50%;
     width: 22px !important;
     height: 22px !important;
+    z-index: 100 !important;
 }
 
 
@@ -110,8 +111,8 @@ div#logo {
 .zoom11 .tpl-div-icon,
 .zoom11 .verified-div-icon,
 .zoom11 .my-div-icon {
-    width: 4px !important;
-    height: 4px !important;
+    width: 8px !important;
+    height: 8px !important;
 }
 
 .zoom12 .tpl-div-icon,
@@ -120,8 +121,8 @@ div#logo {
 .zoom13 .verified-div-icon,
 .zoom12 .my-div-icon,
 .zoom13 .my-div-icon {
-    width: 10px !important;
-    height: 10px !important;
+    width: 12px !important;
+    height: 12px !important;
 }
 
 
