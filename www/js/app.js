@@ -144,7 +144,8 @@ function onPopupOpen() {
             }
         })
         .done(function( msg ) {
-            alert( "Data Saved: " + msg );
+            alert( "Data Saved");
+            //alert( "Data Saved: " + msg );
         });
 
     });
