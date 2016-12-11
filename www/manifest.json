@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Open Exchange",
+  "name": "Foxbox",
   "version": "1.0",
   "icons": [
     {
@@ -13,5 +13,5 @@
   "start_url": "index.html",
   "display": "fullscreen",
   "orientation": "portrait",
-  "background_color": "#ffb500"
+  "background_color": " #F65619"
 }

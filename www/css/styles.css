@@ -17,7 +17,7 @@ header {
 }
 
 .my-div-icon {
-   border: 2px solid rgba(0, 0, 0, 0.4); 
+    border: 2px solid rgba(0, 0, 0, 0.4); 
     background: rgb(255, 255, 255);
     border-radius: 50%;
     width: 16px !important;
@@ -25,8 +25,8 @@ header {
 }
 
 .verified-div-icon {
-   border: 2px solid rgba(0, 0, 0, 0.4); 
-    background: #F65619;
+    border: 2px solid rgba(0, 0, 0, 0.4); 
+    background: #fb6310;
     border-radius: 50%;
     width: 16px !important;
     height: 16px !important;
@@ -40,13 +40,15 @@ header {
     height: 16px !important;
 }
 
-
+.zoom11 .tpl-div-icon,
 .zoom11 .verified-div-icon,
 .zoom11 .my-div-icon {
     width: 4px !important;
     height: 4px !important;
 }
 
+.zoom12 .tpl-div-icon,
+.zoom13 .tpl-div-icon,
 .zoom12 .verified-div-icon,
 .zoom13 .verified-div-icon,
 .zoom12 .my-div-icon,
@@ -89,7 +91,7 @@ display: none;
 }
 
 div#search {
-  background-color: white;
+  background-color: #fff;
   position: absolute;
   top: 0px;
   left: 0px;
