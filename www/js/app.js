@@ -42,7 +42,7 @@ $.getJSON('lfl.json', function(data) {
         if (library.image) {
             tooltipTemplate += '<br/><img width="150px" src="images/{image}"/>';
         } else {
-            tooltipTemplate += '<br/><a href="#"><img class="icon" src="images/ic_add_a_photo_black_24px.svg"/>Add a photo</a>';
+            tooltipTemplate += '<br/><a href="#"><img class="icon" src="assets/ic_add_a_photo_black_24px.svg"/>Add a photo</a>';
             tooltipTemplate += '<form class="photo-add" action="save.php" method="post" enctype="multipart/form-data">';
             tooltipTemplate += '<input type="hidden" name="action" value="photo"/>';
             tooltipTemplate += '<input type="hidden" name="address" value="{address}"/>';
