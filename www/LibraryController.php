@@ -8,10 +8,12 @@
 class LibraryController
 {
     private $upload_dir;
+    private $db_file;
 
-    public function __construct($upload_dir)
+    public function __construct($upload_dir, $db_file)
     {
         $this->upload_dir = $upload_dir;
+        $this->db_file = $db_file;
     }
 
 
@@ -19,7 +21,7 @@ class LibraryController
     {
         $filename = $this->slugify($address) . ".jpg";
         
-        $uploadfile = $this->uploaddir . $filename;
+        $uploadfile = $this->upload_dir . $filename;
 
         // verify the file is a GIF, JPEG, or PNG
         $fileType = exif_imagetype($file["tmp_name"]);
@@ -44,7 +46,7 @@ class LibraryController
 
     public function updateDb($address, $image)
     {
-        $db = json_decode(file_get_contents("./lfl.json"), true);
+        $db = json_decode(file_get_contents($this->db_file), true);
 
         foreach ($db as &$library) {
             if ($library['address'] == $address) {
@@ -54,12 +56,12 @@ class LibraryController
         unset($library);
 
         $r = json_encode($db,  JSON_PRETTY_PRINT);
-        $result = file_put_contents("./lfl.json", $r);
+        $result = file_put_contents($this->db_file, $r);
     }
 
     public function saveToDb($address, $data)
     {
-        $db = json_decode(file_get_contents("./lfl.json"), true);
+        $db = json_decode(file_get_contents($this->db_file), true);
 
         $entry = [
             'address' => $address,
@@ -69,7 +71,7 @@ class LibraryController
 
         $r = json_encode($db,  JSON_PRETTY_PRINT);
 
-        $result = file_put_contents("./lfl.json", $r);
+        $result = file_put_contents($this->db_file, $r);
         //print_r($result);
     }
 

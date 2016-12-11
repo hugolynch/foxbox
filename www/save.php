@@ -8,11 +8,10 @@
 require_once 'LibraryController.php';
 
 
-$controller = new LibraryController('uploads/');
+$controller = new LibraryController('uploads/', 'lfl.json');
 
 $address = $_REQUEST['address'];
 $file = $_FILES['photo'];
-
 $action = $_REQUEST['action'];
 
 if ($action == 'add') {
