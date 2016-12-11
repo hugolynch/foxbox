@@ -4,12 +4,64 @@ body {
 }
 
 header {
-    height: 96px;
-    background: rgb(255, 181, 0);
-    font-size: 24px;
-    line-height: 48px;
-    font-weight: bold;
+    position: absolute;
+    margin: 10px;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+    background: #fff;
+    padding: 4px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 }
+
+header button {
+    padding: 0;
+    background: #fff;
+    border: none;
+}
+
+
+#search {
+    display: flex;
+    margin-left: 10px;
+}
+
+
+div#search input {
+  width: 200px;
+}
+
+div#results {
+  font-style: sans-serif;
+  color: black;
+  font-size: 75%;
+}
+
+
+div#add {
+  background-color: white;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  z-index: 999;
+display: none;
+}
+
+div#logo {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: auto;
+  height: auto;
+  z-index: 9999;
+}
+
 
 #mapid {
     height: 100%;
@@ -76,48 +128,6 @@ a.leaflet-popup-close-button {
 }
 
 .leaflet-popup-tip-container {
-}
-
-div#add {
-  background-color: white;
-  position: absolute;
-  bottom: 40px;
-  right: 40px;
-  width: auto;
-  height: auto;
-  padding: 10px;
-  z-index: 999;
-display: none;
-}
-
-div#search {
-  background-color: #fff;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: auto;
-  padding: 10px;
-  z-index: 999;
-}
-
-
-div#search input {
-  width: 200px;
-}
-div#results {
-  font-style: sans-serif;
-  color: black;
-  font-size: 75%;
-}
-
-div#logo {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  width: auto;
-  height: auto;
-  z-index: 9999;
 }
 
 .icon {

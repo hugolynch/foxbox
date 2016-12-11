@@ -11,7 +11,6 @@
     <meta name="apple-mobile-web-app-title" content="FoxBox">
     <link rel="apple-touch-icon" href="foxbox.png">
     <meta name="mobile-web-app-capable" content="yes">
-    <
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
@@ -21,6 +20,20 @@
 </head>
 
 <body>
+    <header>
+        <button type="button">
+            <img src="assets/menu.svg"/>
+        </button>
+
+        <div id="search">
+            <input type="text" name="addr" value="" id="addr" size="10" />
+            <button type="button" onclick="addr_search();">
+                <img src="assets/search.svg"/>
+            </button>
+        </div>
+      <div id="results"></div>
+    </header>
+
     <div id="mapid"></div>
 
     <div id="add">
@@ -29,29 +42,6 @@
             <input type="hidden" name="action" value="add"/>
             <button type="submit">Add</button>
         </form>
-    </div>
-
-    <style>
-        #search {
-            padding: 0;
-        }
-        #search button {
-            padding: 0;
-            background: #fff;
-            border: none;
-        }
-        #search input {
-            vertical-align: middle;
-        }
-    </style>
-        
-    <div id="search">
-      <img src="assets/menu.svg"/>
-      <input type="text" name="addr" value="" id="addr" size="10" />
-      <button type="button" onclick="addr_search();">
-        <img src="assets/search.svg"/>
-        </button>
-      <div id="results"></div>
     </div>
 
     <div id="logo">
