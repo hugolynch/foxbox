@@ -118,6 +118,47 @@ lfl.addTo(mymap);
 L.control.zoom({position: 'bottomleft'}).addTo(mymap);
 
 
+function onPopupOpen() {
+
+    var tempMarker = this;
+
+    //var tempMarkerGeoJSON = this.toGeoJSON();
+
+    //var lID = tempMarker._leaflet_id; // Getting Leaflet ID of this marker
+
+    $(".add-button").on('click', function () {
+        var address = $(this).data('address');
+        console.log('add location to db');
+        console.log(address);
+        console.log(tempMarker._latlng.lat);
+        console.log(tempMarker._latlng.lng);
+
+        $.ajax({
+            method: "POST",
+            url: 'save.php',
+            data: {
+                action: 'store',
+                address: address,
+                lat: tempMarker._latlng.lat,
+                lon: tempMarker._latlng.lng
+            }
+        })
+        .done(function( msg ) {
+            alert( "Data Saved: " + msg );
+        });
+
+    });
+
+    /*
+    $(".marker-delete-button:visible").click(function () {
+        mymap.removeLayer(tempMarker);
+    });
+    */
+}
+
+
+
+
 $("#search").on('submit', addr_search);
 
 function addr_search(e) {
@@ -126,7 +167,7 @@ function addr_search(e) {
 
     var inp = document.getElementById("address");
     var address = inp.value + " Toronto";
-    $.getJSON('http://nominatim.openstreetmap.org/search?format=json&limit=1&q=' + address, function(data) {
+    $.getJSON('http://nominatim.openstreetmap.org/search?format=json&addressdetails=1&limit=1&q=' + address, function(data) {
 
         $('#results').empty();
         if (data.length == 0) {
@@ -134,6 +175,7 @@ function addr_search(e) {
             return;
         }
 
+        var new_address = data[0].address.house_number + ' ' + data[0].address.road;
         var location = new L.LatLng(data[0].lat, data[0].lon);
         var bb = data[0].boundingbox;
             
@@ -141,14 +183,18 @@ function addr_search(e) {
         var loc2 = new L.LatLng(bb[1], bb[3]);
         var bounds = new L.LatLngBounds(loc1, loc2);
 
+
+        console.log(data[0]);
  
         if (feature) {
             mymap.removeLayer(feature);
         }
         //feature = L.circle( location, 8, {color: 'green', fill: false}).addTo(mymap);
-        feature = L.marker(location, {icon: featureIcon}).addTo(mymap);
+        feature = L.marker(location, {icon: featureIcon}).addTo(mymap)
+            .bindPopup('Address: ' + address + '<br/>Location: ' + location + "<br/><button data-address='" + new_address + "' class='add-button'>Add to map</button>");
         mymap.fitBounds(bounds);
         mymap.setZoom(18);
+        feature.on("popupopen", onPopupOpen);
 
         return false; 
         $.each(data, function(key, val) {
@@ -168,6 +214,7 @@ function addr_search(e) {
         }
     });
 }
+
 
 function chooseAddr(lat1, lng1, lat2, lng2, osm_type) {
     var loc1 = new L.LatLng(lat1, lng1);

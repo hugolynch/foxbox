@@ -14,6 +14,13 @@ $address = $_REQUEST['address'];
 $file = $_FILES['photo'];
 $action = $_REQUEST['action'];
 
+
+if ($action == 'store') {
+    $data = [ 'lat' => $_REQUEST['lat'], 'lon' => $_REQUEST['lon'] ];
+    $controller->saveToDb($address, $data);
+}
+
+
 if ($action == 'add') {
     $data = $controller->getCoords($address);
     $controller->saveToDb($address, $data);
@@ -22,8 +29,6 @@ if ($action == 'add') {
 if ($action == 'photo') {
     $controller->savePhoto($address, $file);
 }
-
-
 
 header('Location: index.html');
 
