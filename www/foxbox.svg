@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="45px" height="36px" viewBox="0 0 45 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 8</title>
+    <title>Group 2</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <polygon id="path-1" points="24 0 12 6 0 0 0 12 12 18 24 12"></polygon>
-        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2" y="-2" width="28" height="22">
-            <rect x="-2" y="-2" width="28" height="22" fill="white"></rect>
+        <polygon id="path-1" points="20 0 10 6 0 0 0 12 10 18 20 12"></polygon>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2" y="-2" width="24" height="22">
+            <rect x="-2" y="-2" width="24" height="22" fill="white"></rect>
             <use xlink:href="#path-1" fill="black"></use>
         </mask>
-        <polygon id="path-3" points="24 0 12 6 0 0 0 12 12 18 24 12"></polygon>
+        <polygon id="path-3" points="20 0 10 6 0 0 0 12 10 18 20 12"></polygon>
         <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" id="radialGradient-5">
             <stop stop-color="#B83A03" offset="0%"></stop>
             <stop stop-color="#FFFFFF" offset="100%"></stop>
@@ -25,24 +25,21 @@
         </mask>
     </defs>
     <g id="Logo-exploration" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard-3" transform="translate(-497.000000, -551.000000)">
-            <g id="Group-8" transform="translate(499.000000, 553.000000)">
-                <g id="Group-7" transform="translate(9.000000, 0.000000)">
+        <g id="Artboard-4" transform="translate(-217.000000, -108.000000)">
+            <g id="Group-2" transform="translate(219.000000, 110.000000)">
+                <g id="Group-4" transform="translate(11.000000, 0.000000)">
                     <use id="Rectangle-15" stroke="#FFFFFF" mask="url(#mask-2)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4" xlink:href="#path-1"></use>
-                    <g id="Group-5">
-                        <mask id="mask-4" fill="white">
-                            <use xlink:href="#path-3"></use>
-                        </mask>
-                        <use id="Rectangle-15" fill="#FF6700" xlink:href="#path-3"></use>
-                        <polygon id="Rectangle-15" fill="#FB6310" mask="url(#mask-4)" points="12 6 0 0 0 12 12 18"></polygon>
-                        <polygon id="Rectangle-15" fill="#FF7200" mask="url(#mask-4)" points="24 0 12 6 12 18 24 12"></polygon>
-                        <polygon id="Rectangle-15" fill="#FB6310" mask="url(#mask-4)" points="12 6 24 12 12 18"></polygon>
-                        <polygon id="Rectangle-15" fill="#FF7200" mask="url(#mask-4)" points="12 6 0 12 12 18"></polygon>
-                        <circle id="Oval-5" fill-opacity="0.2" fill="url(#radialGradient-5)" style="mix-blend-mode: multiply;" mask="url(#mask-4)" cx="24" cy="0" r="4.75"></circle>
-                        <circle id="Oval-5" fill-opacity="0.2" fill="url(#radialGradient-5)" style="mix-blend-mode: multiply;" mask="url(#mask-4)" cx="24" cy="0" r="6"></circle>
-                        <circle id="Oval-5" fill-opacity="0.4" fill="url(#radialGradient-5)" style="mix-blend-mode: multiply;" mask="url(#mask-4)" cx="0.25" cy="0.25" r="6"></circle>
-                        <circle id="Oval-5" fill-opacity="0.2" fill="url(#radialGradient-6)" style="mix-blend-mode: lighten;" mask="url(#mask-4)" cx="12" cy="18" r="6"></circle>
-                    </g>
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <use id="Rectangle-15" fill="#FF5A00" xlink:href="#path-3"></use>
+                    <polygon id="Rectangle-15" fill="#FF5A00" mask="url(#mask-4)" points="10 6 20 12 10 18"></polygon>
+                    <polygon id="Rectangle-15" fill="#FF5A00" mask="url(#mask-4)" points="0 0 10 6 0 12"></polygon>
+                    <polygon id="Rectangle-15" fill="#FF7200" mask="url(#mask-4)" points="10 6 0 12 10 18"></polygon>
+                    <polygon id="Rectangle-15" fill="#FF7200" mask="url(#mask-4)" points="20 0 10 6 20 12"></polygon>
+                    <circle id="Oval-5" fill-opacity="0.2" fill="url(#radialGradient-5)" style="mix-blend-mode: multiply;" mask="url(#mask-4)" cx="19.75" cy="0" r="6"></circle>
+                    <circle id="Oval-5" fill-opacity="0.3" fill="url(#radialGradient-5)" style="mix-blend-mode: multiply;" mask="url(#mask-4)" cx="-8.8817842e-16" cy="0.25" r="6"></circle>
+                    <circle id="Oval-5" fill-opacity="0.25" fill="url(#radialGradient-6)" style="mix-blend-mode: lighten;" mask="url(#mask-4)" cx="9.75" cy="18" r="6"></circle>
                 </g>
                 <g id="Combined-Shape">
                     <use fill="#000000" fill-rule="evenodd" xlink:href="#path-7"></use>
