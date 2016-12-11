@@ -101,7 +101,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/hugolynch/ciw1168ie003k2kr33r5p963
 
 
 var overlays = {
-    'Toronto Public Libraries': tpl,
+    'Public Libraries': tpl,
     'Library Boxes': lfl
 };
 
