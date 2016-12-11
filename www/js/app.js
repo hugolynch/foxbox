@@ -24,6 +24,11 @@ var tplIcon = L.divIcon({
     iconAnchor: [10, 4]
 });
 
+var featureIcon = L.divIcon({
+    className: 'feature-div-icon',
+    iconAnchor: [10, 4]
+});
+
 
 var lfl = L.layerGroup();
 var tpl = L.layerGroup();
@@ -115,23 +120,23 @@ L.control.zoom({position: 'bottomleft'}).addTo(mymap);
 
 $("#search").on('submit', addr_search);
 
-function addr_search() {
+function addr_search(e) {
+
+    e.preventDefault();
 
     var inp = document.getElementById("address");
     var address = inp.value + " Toronto";
     $.getJSON('http://nominatim.openstreetmap.org/search?format=json&limit=1&q=' + address, function(data) {
 
-    $('#results').empty();
-    if (data.length == 0) {
-        $('<p>', { html: "No results." }).appendTo('#results');
-        return;
-    }
-
+        $('#results').empty();
+        if (data.length == 0) {
+            $('<p>', { html: "No results." }).appendTo('#results');
+            return;
+        }
 
         var location = new L.LatLng(data[0].lat, data[0].lon);
         var bb = data[0].boundingbox;
             
-        console.log(bb);
         var loc1 = new L.LatLng(bb[0], bb[2]);
         var loc2 = new L.LatLng(bb[1], bb[3]);
         var bounds = new L.LatLngBounds(loc1, loc2);
@@ -140,7 +145,8 @@ function addr_search() {
         if (feature) {
             mymap.removeLayer(feature);
         }
-        feature = L.circle( location, 8, {color: 'green', fill: false}).addTo(mymap);
+        //feature = L.circle( location, 8, {color: 'green', fill: false}).addTo(mymap);
+        feature = L.marker(location, {icon: featureIcon}).addTo(mymap);
         mymap.fitBounds(bounds);
         mymap.setZoom(18);
 

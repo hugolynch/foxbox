@@ -2,23 +2,21 @@
 <head>
     <meta charset="utf-8">
     <title>FoxBox</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#F65619">
-   
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
- 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="FoxBox">
-    <link rel="apple-touch-icon" href="foxbox.png">
     <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="foxbox.png">
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
     <link rel="stylesheet" href="css/styles.css">
-    
-
 </head>
 
 <body>
@@ -27,13 +25,13 @@
             <img src="assets/menu.svg" alt="menu"/>
         </button>
 
-        <form id="search" action="#">
+        <form id="search" action="#" method="post">
             <input type="text" name="address" value="" id="address" size="10" />
             <button type="submit">
                 <img src="assets/search.svg" alt="search"/>
             </button>
-        </form>
       <div id="results"></div>
+        </form>
     </header>
 
     <div id="mapid"></div>

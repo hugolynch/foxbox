@@ -60,6 +60,7 @@ div#logo {
   width: auto;
   height: auto;
   z-index: 9999;
+    margin-left: -22.5px;
 }
 
 
@@ -67,6 +68,14 @@ div#logo {
     height: 100%;
     width: 100%;
 }
+
+.feature-div-icon {
+    border: 2px solid green;
+    border-radius: 50%;
+    width: 22px !important;
+    height: 22px !important;
+}
+
 
 .my-div-icon {
     border: 2px solid rgba(0, 0, 0, 0.4); 
