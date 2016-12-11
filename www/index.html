@@ -1,11 +1,13 @@
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>FoxBox</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#F65619">
-    
+   
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+ 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="FoxBox">
@@ -22,15 +24,15 @@
 <body>
     <header>
         <button type="button">
-            <img src="assets/menu.svg"/>
+            <img src="assets/menu.svg" alt="menu"/>
         </button>
 
-        <div id="search">
-            <input type="text" name="addr" value="" id="addr" size="10" />
-            <button type="button" onclick="addr_search();">
-                <img src="assets/search.svg"/>
+        <form id="search" action="#">
+            <input type="text" name="address" value="" id="address" size="10" />
+            <button type="submit">
+                <img src="assets/search.svg" alt="search"/>
             </button>
-        </div>
+        </form>
       <div id="results"></div>
     </header>
 
@@ -48,12 +50,12 @@
         <img src="foxbox.svg" alt="foxbox logo"/>
     </div>
 
-</body>
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
               integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
               crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
 
+</body>
 
 </html>
