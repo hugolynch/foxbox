@@ -869,5 +869,13 @@
             43.661326,
             -79.4952813
         ]
+    },
+    {
+        "address": "12 Lakehurst Crescent",
+        "coordinates": [
+            43.69588255,
+            -79.25718655
+        ],
+        "verified": true
     }
 ]
