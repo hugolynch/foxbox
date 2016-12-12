@@ -62,3 +62,20 @@ http://www.insidetoronto.com/news-story/4948097-brockton-village-gets-its-own-li
     https://www.canadapost.ca/tools/pg/manual/PGaddress-e.asp?ecid=murl10006450#1441964
 
 
+Avenue Ave.
+Boulevard Blvd.
+Circle Cir.
+Court Crt.
+Crescent Cres.
+Drive Dr.
+Esplanade Espl.
+Expressway Expy.
+Highway Hwy.
+Manor Manor
+Meadow Meadow
+Park Pk.
+Parkway Pky.
+Place Pl.
+Road Rd.
+Street St.
+Square Sq.
