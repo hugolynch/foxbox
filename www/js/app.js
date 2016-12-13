@@ -33,11 +33,7 @@ var featureIcon = L.divIcon({
 var lfl = L.layerGroup();
 var tpl = L.layerGroup();
 
-
-
-$.getJSON('lfl.json', function(data) {
-    data.forEach(function(library) {
-
+function createTooltip(library) {
         var tooltipTemplate =  '{address}';
         if (library.image) {
             tooltipTemplate += '<br/><img width="150px" src="images/{image}"/>';
@@ -49,6 +45,14 @@ $.getJSON('lfl.json', function(data) {
             tooltipTemplate += '<input type="file" required name="photo"/>';
             tooltipTemplate += '<button type="submit">Save</button></form>';
         }
+    return tooltipTemplate;
+}
+
+
+$.getJSON('lfl.json', function(data) {
+    data.forEach(function(library) {
+
+        var tooltipTemplate = createTooltip(library);
 
         var tooltipData = {  
             address: library.address,
@@ -122,7 +126,7 @@ function onPopupOpen() {
 
     var tempMarker = this;
 
-    //var tempMarkerGeoJSON = this.toGeoJSON();
+    var tempMarkerGeoJSON = this.toGeoJSON();
 
     //var lID = tempMarker._leaflet_id; // Getting Leaflet ID of this marker
 
@@ -144,7 +148,18 @@ function onPopupOpen() {
             }
         })
         .done(function( msg ) {
-            alert( "Data Saved");
+            tooltipTemplate = createTooltip({"address": address});
+            var tooltipData = {  
+                address: address,
+            };
+            var tooltipContent = L.Util.template(tooltipTemplate, tooltipData); 
+
+            mymap.removeLayer(tempMarker);
+            L.marker(tempMarker._latlng, {icon: myIcon})
+            .addTo(mymap)
+            .bindPopup(tooltipContent)
+            .openPopup();
+            
             //alert( "Data Saved: " + msg );
         });
 
@@ -192,7 +207,7 @@ function addr_search(e) {
         }
         //feature = L.circle( location, 8, {color: 'green', fill: false}).addTo(mymap);
         feature = L.marker(location, {icon: featureIcon}).addTo(mymap)
-            .bindPopup('Address: ' + address + '<br/>Location: ' + location + "<br/><button data-address='" + new_address + "' class='add-button'>Add to map</button>");
+            .bindPopup('Address: ' + new_address + '<br/>Location: ' + location + "<br/><button data-address='" + new_address + "' class='add-button'>Add to map</button>");
         mymap.fitBounds(bounds);
         mymap.setZoom(18);
         feature.on("popupopen", onPopupOpen);
