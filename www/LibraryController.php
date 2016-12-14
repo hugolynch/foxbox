@@ -63,8 +63,12 @@ class LibraryController
     {
         $db = json_decode(file_get_contents($this->db_file), true);
 
+        $timestamp = new DateTime();
+        $ip = $_SERVER['REMOTE_ADDR'];
         $entry = [
             'address' => $address,
+            'created_at' => $timestamp->format('Y-m-d H:i:s'),
+            'created_ip' => $ip,
             'coordinates' => [ (float)$data['lat'], (float)$data['lon']]
         ];
         array_push($db, $entry);
