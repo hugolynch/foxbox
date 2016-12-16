@@ -13,8 +13,26 @@ but not to other users until it's validated by and admin user.
 For this we could leverage localStorage, which will keep a flag stored in the user's browser (of course, it they
 delete teh storage or use a different browser, they will not see the image).
 
-Currently users get promped to upload an image from their device via a form. Another way to upload images would be
+Currently users get prompted to upload an image from their device via a form. Another way to upload images would be
 to select a foxbox and take a photo with the phone, which would be automatically uploaded.
+
+
+### Adding new library
+
+The workflow is currently as follows:
+
+ 1. User searches for address (at the moment the system does not check to see if it already is in database)
+
+ 2. System shows location in map.
+
+ 3. If user click on map, popup window comes up (might make it come up by default).
+
+ 4. Popup prompts user to add library to database.
+
+ 5. System makes ajax call and add address to database.
+
+ 6. System adds location to map, and popup prompts user to add image.
+
 
 ### Data structure
 

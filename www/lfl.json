@@ -846,7 +846,9 @@
         "coordinates": [
             43.6506776,
             -79.5105087
-        ]
+        ],
+        "image": "65-king-george-s-rd.jpg",
+        "verified": true
     },
     {
         "address": "21 Airdrie Rd.",
