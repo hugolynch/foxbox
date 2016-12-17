@@ -48,9 +48,14 @@ class LibraryController
     {
         $db = json_decode(file_get_contents($this->db_file), true);
 
+        $timestamp = new DateTime();
+        $ip = $_SERVER['REMOTE_ADDR'];
+
         foreach ($db as &$library) {
             if ($library['address'] == $address) {
                 $library['image'] = $image;
+                $library['created_at'] = $timestamp->format('Y-m-d H:i:s');
+                $library['created_ip'] = $ip;
             }
         }
         unset($library);
