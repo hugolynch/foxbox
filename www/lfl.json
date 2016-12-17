@@ -499,7 +499,8 @@
         "coordinates": [
             43.6704335,
             -79.2883645
-        ]
+        ],
+        "image": "22-fernwood-park-ave.jpg"
     },
     {
         "address": "308 Sackville St.",
@@ -586,7 +587,8 @@
         "coordinates": [
             43.7938403,
             -79.1628935
-        ]
+        ],
+        "image": "1bluenosecres.jpg"
     },
     {
         "address": "127 Parkmount Rd.",
@@ -725,7 +727,8 @@
         "coordinates": [
             43.6323711,
             -79.3566683
-        ]
+        ],
+        "image": "24-fifth-st-ward-s-island.jpg"
     },
     {
         "address": "35 Melbourne Ave.",
@@ -804,7 +807,8 @@
         "coordinates": [
             43.7122623,
             -79.2907495
-        ]
+        ],
+        "image": "8-rosita-cres.jpg"
     },
     {
         "address": "666 Durie St.",

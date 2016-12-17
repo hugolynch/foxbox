@@ -1,3 +1,7 @@
+(function() {
+
+
+
 var feature;
 
 var mymap = L.map('mapid', {zoomControl: false}).setView([43.671775, -79.334912], 13);
@@ -263,82 +267,5 @@ mymap.on('zoomend', function(event) {
 });
 
 
-/*
 
-// attaching function on map click
-//http://jsfiddle.net/kedar2a/5VLJU/8/
-mymap.on('click', onMapClick);
-*/
-
-/*
-function onMapClick(e) {
-
-    var geojsonFeature = {
-        "type": "Feature",
-            "properties": {},
-            "geometry": {
-                "type": "Point",
-                "coordinates": [e.latlng.lat, e.latlng.lng]
-        }
-    }
-
-    var marker;
-
-    L.geoJson(geojsonFeature, {
-        
-        pointToLayer: function(feature, latlng){
-            
-            marker = L.marker(e.latlng, {
-                
-                title: "Resource Location",
-                alt: "Resource Location",
-                riseOnHover: true,
-                draggable: true,
-
-            }).bindPopup("<input type='button' value='Delete this marker' class='marker-delete-button'/>");
-
-            marker.on("popupopen", onPopupOpen);
-       
-            return marker;
-        }
-    }).addTo(mymap);
-}
-
-// Function to handle delete as well as other events on marker popup open
-function onPopupOpen() {
-
-    var tempMarker = this;
-
-    //var tempMarkerGeoJSON = this.toGeoJSON();
-
-    //var lID = tempMarker._leaflet_id; // Getting Leaflet ID of this marker
-
-    // To remove marker on click of delete
-    $(".marker-delete-button:visible").click(function () {
-        mymap.removeLayer(tempMarker);
-    });
-}
-
-
-// getting all the markers at once
-function getAllMarkers() {
-    
-    var allMarkersObjArray = [];//new Array();
-    var allMarkersGeoJsonArray = [];//new Array();
-
-    $.each(map._layers, function (ml) {
-        //console.log(map._layers)
-        if (mymap._layers[ml].feature) {
-            
-            allMarkersObjArray.push(this)
-                                    allMarkersGeoJsonArray.push(JSON.stringify(this.toGeoJSON()))
-        }
-    })
-
-    console.log(allMarkersObjArray);
-    alert("total Markers : " + allMarkersGeoJsonArray.length + "\n\n" + allMarkersGeoJsonArray + "\n\n Also see your console for object view of this array" );
-}
-
-$(".get-markers").on("click", getAllMarkers);
-*/
-
+}());
