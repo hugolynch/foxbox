@@ -38,6 +38,7 @@ class LibraryController
             copy($uploadfile, "./images/" . $filename);
 
             $this->updateDb($address, $filename);
+            return "$filename";
         } else {
             echo "Possible file upload attack!\n";
         }

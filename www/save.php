@@ -27,9 +27,12 @@ if ($action == 'add') {
 }
 
 if ($action == 'photo') {
-    $controller->savePhoto($address, $file);
+    $image = $controller->savePhoto($address, $file);
+
+    header('Content-Type: application/json');
+    echo json_encode(['address' => $address, 'image' => $image]);
 }
 
-header('Location: index.html');
+//header('Location: index.html');
 
 

@@ -1,15 +1,32 @@
 (function() {
 
 
-
 var feature;
 
-var mymap = L.map('mapid', {zoomControl: false}).setView([43.671775, -79.334912], 13);
+var tile_url = 'https://api.mapbox.com/styles/v1/hugolynch/ciw1168ie003k2kr33r5p963z/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaHVnb2x5bmNoIiwiYSI6ImNpdzEwbHc1YTA5Mm8yb3BiOHR5eHB5YWIifQ.9Gkbywr6-VD6cEJrUneNBA';
+
+var zoom = {
+    "min": 11,
+    "max": 18,
+    "default": 13
+};
+
+
+var mymap = L.map('mapid', {zoomControl: false}).
+    setView([43.671775, -79.334912], zoom.default);
 
 mymap.setMaxBounds([
     [43.89146, -79.69002],
     [43.54407, -79.06242]
 ]);
+
+/* Set the base layer */
+L.tileLayer(tile_url, {
+    attribution: '',
+    minZoom: zoom.min,
+    maxZoom: zoom.max
+}).addTo(mymap);
+
 
 
 
@@ -37,32 +54,39 @@ var featureIcon = L.divIcon({
 var lfl = L.layerGroup();
 var tpl = L.layerGroup();
 
-function createTooltip(library) {
+function createTooltip(image) {
+console.log(image);
         var tooltipTemplate =  '{address}';
-        if (library.image) {
+        if (image) {
             tooltipTemplate += '<br/><img width="150px" src="images/{image}"/>';
         } else {
-            tooltipTemplate += '<br/><a href="#"><img class="icon" src="assets/ic_add_a_photo_black_24px.svg"/>Add a photo</a>';
-            tooltipTemplate += '<form class="photo-add" action="save.php" method="post" enctype="multipart/form-data">';
+            tooltipTemplate += '<br/><a href="#" class="show-form"><img class="icon" src="assets/ic_add_a_photo_black_24px.svg"/>Add a photo</a>';
+
+            tooltipTemplate += '<form style="visibility:hidden" class="photo-add" action="save.php" method="post" enctype="multipart/form-data">';
             tooltipTemplate += '<input type="hidden" name="action" value="photo"/>';
             tooltipTemplate += '<input type="hidden" name="address" value="{address}"/>';
             tooltipTemplate += '<input type="file" required name="photo"/>';
-            tooltipTemplate += '<button type="submit">Save</button></form>';
+            tooltipTemplate += '<button type="submit">Save</button>';
+            tooltipTemplate += '</form>';
         }
     return tooltipTemplate;
 }
 
 
 $.getJSON('lfl.json', function(data) {
+    $(".photo-add").on('submit', function (e) {
+        e.preventDefault();
+        console.log('photo');
+    });
+
+
     data.forEach(function(library) {
 
-        var tooltipTemplate = createTooltip(library);
-
+        var tooltipTemplate = createTooltip(library.image);
         var tooltipData = {  
             address: library.address,
             image: library.image
         };
-
         var tooltipContent = L.Util.template(tooltipTemplate, tooltipData); 
 
         if (library.verified) {
@@ -104,14 +128,6 @@ $.getJSON('tpl.json', function(data) {
     });
 });
 
-L.tileLayer('https://api.mapbox.com/styles/v1/hugolynch/ciw1168ie003k2kr33r5p963z/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaHVnb2x5bmNoIiwiYSI6ImNpdzEwbHc1YTA5Mm8yb3BiOHR5eHB5YWIifQ.9Gkbywr6-VD6cEJrUneNBA', {
-    attribution: '',
-    minZoom: 11,
-    maxZoom: 18,
-
-}).addTo(mymap);
-
-
 
 var overlays = {
     'Public Libraries': tpl,
@@ -152,7 +168,7 @@ function onPopupOpen() {
             }
         })
         .done(function( msg ) {
-            tooltipTemplate = createTooltip({"address": address});
+            tooltipTemplate = createTooltip();
             var tooltipData = {  
                 address: address,
             };
@@ -169,25 +185,20 @@ function onPopupOpen() {
 
     });
 
-    /*
-    $(".marker-delete-button:visible").click(function () {
-        mymap.removeLayer(tempMarker);
-    });
-    */
+    
 }
-
-
 
 
 $("#search").on('submit', addr_search);
 
 function addr_search(e) {
-
+    var search_suffix = ', Toronto';
+    var search_url = 'http://nominatim.openstreetmap.org/search?format=json&addressdetails=1&limit=1&q=';
     e.preventDefault();
 
     var inp = document.getElementById("address");
-    var address = inp.value + " Toronto";
-    $.getJSON('http://nominatim.openstreetmap.org/search?format=json&addressdetails=1&limit=1&q=' + address, function(data) {
+    var address = inp.value + search_suffix;
+    $.getJSON(search_url + address, function(data) {
 
         $('#results').empty();
         if (data.length == 0) {
@@ -205,61 +216,68 @@ function addr_search(e) {
 
 
         console.log(data[0]);
- 
+
         if (feature) {
             mymap.removeLayer(feature);
         }
-        //feature = L.circle( location, 8, {color: 'green', fill: false}).addTo(mymap);
         feature = L.marker(location, {icon: featureIcon}).addTo(mymap)
             .bindPopup('Address: ' + new_address + '<br/>Location: ' + location + "<br/><button data-address='" + new_address + "' class='add-button'>Add to map</button>");
         mymap.fitBounds(bounds);
         mymap.setZoom(18);
         feature.on("popupopen", onPopupOpen);
-
-        return false; 
-        $.each(data, function(key, val) {
-            bb = val.boundingbox;
-            items.push("<li><a href='#' onclick='chooseAddr(" + bb[0] + ", " + bb[2] + ", " + bb[1] + ", " + bb[3]  + ", \"" + val.osm_type + "\");return false;'>" + val.display_name + '</a></li>');
-        });
-
-        $('#results').empty();
-        if (items.length != 0) {
-            $('<p>', { html: "Search results:" }).appendTo('#results');
-            $('<ul/>', {
-                'class': 'my-new-list',
-                html: items.join('')
-            }).appendTo('#results');
-        } else {
-            $('<p>', { html: "No results found" }).appendTo('#results');
-        }
     });
 }
 
 
-function chooseAddr(lat1, lng1, lat2, lng2, osm_type) {
-    var loc1 = new L.LatLng(lat1, lng1);
-    var loc2 = new L.LatLng(lat2, lng2);
-    var bounds = new L.LatLngBounds(loc1, loc2);
+    $("#mapid").on('click', '.show-form', function (e) {
+        e.preventDefault();
 
-    if (feature) {
-        mymap.removeLayer(feature);
-    }
-    if (osm_type == "node") {
-        feature = L.circle( loc1, 25, {color: 'green', fill: false}).addTo(mymap);
-        mymap.fitBounds(bounds);
-        mymap.setZoom(18);
-    } else {
-        var loc3 = new L.LatLng(lat1, lng2);
-        var loc4 = new L.LatLng(lat2, lng1);
+        //FIXME: use popup.update() w/display:none to resize popup box.
 
-        feature = L.polyline( [loc1, loc4, loc2, loc3, loc1], {color: 'red'}).addTo(mymap);
-        mymap.fitBounds(bounds);
-    }
-}
+        $(".photo-add").css('visibility', 'visible');
+    });
 
-/*
-https://github.com/derickr/osm-tools/blob/master/leaflet-nominatim-example/js/map.js
-*/
+
+
+mymap.on('popupopen', function(e) {
+    var tempMarker = this;
+
+
+    /* Upload image and update database. */
+    $("#mapid").on('submit', '.photo-add', function (e) {
+        e.preventDefault();
+
+        var url = $(this).attr('action');
+
+        data = new FormData( this );
+
+        $.ajax({
+            url: url,
+            type: 'POST',
+            data: new FormData(this),
+            processData: false,
+            contentType: false
+        })
+        .done(function(msg) {
+            console.log(msg);
+            console.log(msg.address);
+
+            tooltipTemplate = createTooltip(msg.image);
+            console.log('tooltip');
+            console.log(tooltipTemplate);
+
+            var tooltipData = {  
+                address: msg.address,
+                image: msg.image
+            };
+            var tooltipContent = L.Util.template(tooltipTemplate, tooltipData); 
+
+            tempMarker._popup.setContent(tooltipContent);
+        });
+
+    });
+
+});
 
 
 mymap.on('zoomend', function(event) {
