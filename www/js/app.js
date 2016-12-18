@@ -12,10 +12,10 @@ var zoom = {
 };
 
 
-var mymap = L.map('mapid', {zoomControl: false}).
-    setView([43.671775, -79.334912], zoom.default);
+var appmap = L.map('mapid', {zoomControl: false})
+    .setView([43.671775, -79.334912], zoom.default);
 
-mymap.setMaxBounds([
+appmap.setMaxBounds([
     [43.89146, -79.69002],
     [43.54407, -79.06242]
 ]);
@@ -25,11 +25,10 @@ L.tileLayer(tile_url, {
     attribution: '',
     minZoom: zoom.min,
     maxZoom: zoom.max
-}).addTo(mymap);
+}).addTo(appmap);
 
 
-
-
+/* custom icons */
 var myIcon = L.divIcon({
     className: 'my-div-icon',
     iconAnchor: [10, 4]
@@ -50,12 +49,8 @@ var featureIcon = L.divIcon({
     iconAnchor: [10, 4]
 });
 
-
-var lfl = L.layerGroup();
-var tpl = L.layerGroup();
-
-function createTooltip(image) {
-console.log(image);
+/* Popup templates */
+function createLflTooltip(image) {
         var tooltipTemplate =  '{address}';
         if (image) {
             tooltipTemplate += '<br/><img width="150px" src="images/{image}"/>';
@@ -72,74 +67,72 @@ console.log(image);
     return tooltipTemplate;
 }
 
+function createTplTooltip(image) {
+    var tooltipTemplate =  '<strong>Toronto Public Library</strong><br/>';
+    tooltipTemplate +=  '<strong><a href="{url}">{name} Branch</a></strong>';
+    tooltipTemplate +=  '<br/>{address}';
+    if (image) {
+        tooltipTemplate += '<br/><img width="150px" src="images/{image}"/>';
+    }
+    return tooltipTemplate;
+}
 
-$.getJSON('lfl.json', function(data) {
-    $(".photo-add").on('submit', function (e) {
-        e.preventDefault();
-        console.log('photo');
-    });
 
+var layers = [
+    {
+        'id': 'lfl',
+        'name': 'Library Boxes'
+    },
+    {
+        'id': 'tpl',
+        'name':  'Public Libraries'
+    }
+];
 
-    data.forEach(function(library) {
+var overlays = {};
 
-        var tooltipTemplate = createTooltip(library.image);
-        var tooltipData = {  
-            address: library.address,
-            image: library.image
-        };
-        var tooltipContent = L.Util.template(tooltipTemplate, tooltipData); 
+layers.forEach(function(layer) {
+    layer.data = L.layerGroup();
+    
+    $.getJSON(layer.id + '.json', function(data) {
+        data.forEach(function(library) {
 
-        if (library.verified) {
-            icon = verifiedIcon;
-        } else {
-            icon = myIcon;
-        }
+            /* If we have a name, it is a Toronto Public Library */            
+            if (library.name) {
+                icon = tplIcon;
+                tooltipTemplate = createTplTooltip(library.image);
+            }
+            else {
+                tooltipTemplate = createLflTooltip(library.image);
+                if (library.verified === true) {
+                    icon = verifiedIcon;
+                } else {
+                    icon = myIcon;
+                }
+            }
+            var tooltipData = {  
+                name: library.name,
+                address: library.address,
+                url: library.url,
+                image: library.image
+            };
+            var tooltipContent = L.Util.template(tooltipTemplate, tooltipData); 
 
-        L.marker(library.coordinates, {icon: icon})
-            .addTo(lfl)
+            L.marker(library.coordinates, {icon: icon})
+            .addTo(layer.data)
             .bindPopup(tooltipContent);
+        });
     });
+
+    layer.data.addTo(appmap);
+
+    overlays[layer.name] = layer.data;
 });
 
 
-$.getJSON('tpl.json', function(data) {
-    data.forEach(function(library) {
-
-        var tooltipTemplate =  '<strong>Toronto Public Library</strong><br/>';
-        tooltipTemplate +=  '<strong><a href="{url}">{name} Branch</a></strong>';
-        tooltipTemplate +=  '<br/>{address}';
-        if (library.image) {
-            tooltipTemplate += '<br/><img width="150px" src="images/{image}"/>';
-        }
-
-        var tooltipData = {  
-            name: library.name,
-            address: library.address,
-            url: library.url,
-            image: library.image
-        };
-
-        var tooltipContent = L.Util.template(tooltipTemplate, tooltipData); 
-        icon = tplIcon;
-
-        L.marker(library.coordinates, {icon: icon})
-            .addTo(tpl)
-            .bindPopup(tooltipContent);
-    });
-});
-
-
-var overlays = {
-    'Public Libraries': tpl,
-    'Library Boxes': lfl
-};
-
-L.control.layers(null, overlays, {position: 'bottomright'}).addTo(mymap);
-
-tpl.addTo(mymap);
-lfl.addTo(mymap);
-
-L.control.zoom({position: 'bottomleft'}).addTo(mymap);
+/* Add controls */
+L.control.layers(null, overlays, {position: 'bottomright'}).addTo(appmap);
+L.control.zoom({position: 'bottomleft'}).addTo(appmap);
 
 
 function onPopupOpen() {
@@ -156,10 +149,12 @@ function onPopupOpen() {
         console.log(address);
         console.log(tempMarker._latlng.lat);
         console.log(tempMarker._latlng.lng);
+        
+        var url = $(this).attr('action');
 
         $.ajax({
             method: "POST",
-            url: 'save.php',
+            url: url,
             data: {
                 action: 'store',
                 address: address,
@@ -168,15 +163,15 @@ function onPopupOpen() {
             }
         })
         .done(function( msg ) {
-            tooltipTemplate = createTooltip();
+            tooltipTemplate = createLflTooltip();
             var tooltipData = {  
                 address: address,
             };
             var tooltipContent = L.Util.template(tooltipTemplate, tooltipData); 
 
-            mymap.removeLayer(tempMarker);
+            appmap.removeLayer(tempMarker);
             L.marker(tempMarker._latlng, {icon: myIcon})
-            .addTo(mymap)
+            .addTo(appmap)
             .bindPopup(tooltipContent)
             .openPopup();
             
@@ -215,15 +210,13 @@ function addr_search(e) {
         var bounds = new L.LatLngBounds(loc1, loc2);
 
 
-        console.log(data[0]);
-
         if (feature) {
-            mymap.removeLayer(feature);
+            appmap.removeLayer(feature);
         }
-        feature = L.marker(location, {icon: featureIcon}).addTo(mymap)
+        feature = L.marker(location, {icon: featureIcon}).addTo(appmap)
             .bindPopup('Address: ' + new_address + '<br/>Location: ' + location + "<br/><button data-address='" + new_address + "' class='add-button'>Add to map</button>");
-        mymap.fitBounds(bounds);
-        mymap.setZoom(18);
+        appmap.fitBounds(bounds);
+        appmap.setZoom(18);
         feature.on("popupopen", onPopupOpen);
     });
 }
@@ -239,7 +232,7 @@ function addr_search(e) {
 
 
 
-mymap.on('popupopen', function(e) {
+appmap.on('popupopen', function(e) {
     var tempMarker = this;
 
 
@@ -259,12 +252,7 @@ mymap.on('popupopen', function(e) {
             contentType: false
         })
         .done(function(msg) {
-            console.log(msg);
-            console.log(msg.address);
-
-            tooltipTemplate = createTooltip(msg.image);
-            console.log('tooltip');
-            console.log(tooltipTemplate);
+            tooltipTemplate = createLflTooltip(msg.image);
 
             var tooltipData = {  
                 address: msg.address,
@@ -280,8 +268,8 @@ mymap.on('popupopen', function(e) {
 });
 
 
-mymap.on('zoomend', function(event) {
-    document.body.className = "zoom"+mymap.getZoom();
+appmap.on('zoomend', function(event) {
+    document.body.className = "zoom"+appmap.getZoom();
 });
 
 
