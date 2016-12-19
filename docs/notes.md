@@ -9,12 +9,13 @@
 We want to make the entry of new data as easy as possible.
 However, we need to protect from vandalism, in particular, with file uploads.
 One possibility is to upload files and display them right away to the user that uploaded them,
-but not to other users until it's validated by and admin user. 
-For this we could leverage localStorage, which will keep a flag stored in the user's browser (of course, it they
-delete teh storage or use a different browser, they will not see the image).
+but not to other users until it's validated by an admin user. 
+For this we could leverage localStorage, which will keep a flag stored in the user's browser (of course, if they
+delete the storage or use a different browser, they will not see the image).
 
 Currently users get prompted to upload an image from their device via a form. Another way to upload images would be
-to select a foxbox and take a photo with the phone, which would be automatically uploaded.
+to select a foxbox and take a photo with the phone, which would be automatically uploaded (mobile browsers seem to do
+this already, to an extent).
 
 
 ### Adding new library
@@ -33,20 +34,67 @@ The workflow is currently as follows:
 
  6. System adds location to map, and popup prompts user to add image.
 
+ 7. If user uploads image, new ajax call is made to save the image.
+
+ 8. Image is displayed in popup.
+
 
 ### Data structure
 
  - Should we use the same data structure for foxboxes and Toronto Public Libraries?
  - Shoud we use GeoJson?
 
+Currently we have:
 
+
+    {
+        "address": "56 Walpole Ave.",
+        "coordinates": [
+            43.67464,
+            -79.32735
+        ],
+        "verified": true,
+        "image": "56walpoleave.jpg"
+    },
+
+
+Potential additions:
+
+For images:
+
+
+    image: {
+        author: ['google'| 'web-upload' | 'admin-upload'];
+        src: (image name)
+        uploaded_at
+    }
+
+(do we want to keep array of images?)
+
+
+
+For libraries:
+
+
+    {
+        created_at
+        created_ip
+
+        updated_at
+        updated_ip
+    }
+
+        lfl_ref: #xxxx
+
+        status: "verified" |  "google_maps" | "lfl"
+        
 
 ## Newspaper articles
 
 http://thevarsity.ca/2016/03/07/reviewing-the-contents-of-torontos-little-free-libraries/
 
 
- - 261 Brunswick Avenue x
+ - 261 Brunswick Avenue X
  - 468 Grace Street X
  - 550 Clinton Street X
  - 663 Euclid Avenue. X
