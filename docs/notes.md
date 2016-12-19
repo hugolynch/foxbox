@@ -47,6 +47,8 @@ The workflow is currently as follows:
 Currently we have:
 
 
+
+
     {
         "address": "56 Walpole Ave.",
         "coordinates": [
@@ -60,13 +62,25 @@ Currently we have:
 
 Potential additions:
 
+
+
 For images:
 
 
     image: {
-        author: ['google'| 'web-upload' | 'admin-upload'];
+        author: ['street-view'| 'web-upload' | 'admin-upload']
+
+        comments [
+                {
+                comment:
+                date:
+            }
+        ]
         src: (image name)
-        uploaded_at
+        uploaded_at:
+        uploaded_ip:
+        verified: true | false
+        score: 12[] 
     }
 
 (do we want to keep array of images?)
@@ -126,6 +140,13 @@ http://www.insidetoronto.com/news-story/4948097-brockton-village-gets-its-own-li
 
  * Canada post:
     https://www.canadapost.ca/tools/pg/manual/PGaddress-e.asp?ecid=murl10006450#1441964
+
+
+How we parse: Avon Avenue
+
+Av[. $]
+
+Ave. = [ 'Avenue', 'Av' ] 
 
 
 Avenue Ave.
