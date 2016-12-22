@@ -17,6 +17,24 @@ class LibraryController
     }
 
 
+    public function getAll()
+    {
+        return file_get_contents($this->db_file);
+    }
+
+    public function get($id)
+    {
+        $db = json_decode(file_get_contents($this->db_file), true);
+
+        foreach ($db as &$library) {
+            if ($library['image'] == $id) {
+                return $library;
+            }
+        }
+        return null;
+    }
+
+
     public function savePhoto($address, $file)
     {
         $filename = $this->slugify($address) . ".jpg";
@@ -35,7 +53,7 @@ class LibraryController
         if (move_uploaded_file($file['tmp_name'], $uploadfile)) {
             $convert_params = "-resize '300x300^' -gravity Center -crop 300x300+0+0";
             exec("convert $uploadfile $convert_params $uploadfile");
-            copy($uploadfile, "./images/" . $filename);
+            copy($uploadfile, "../images/" . $filename);
 
             $this->updateDb($address, $filename);
             return "$filename";

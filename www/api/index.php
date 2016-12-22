@@ -8,12 +8,26 @@
 require_once 'LibraryController.php';
 
 
-$controller = new LibraryController('uploads/', 'lfl.json');
+$controller = new LibraryController('../uploads/', '../lfl.json');
 
 $address = $_REQUEST['address'];
 $file = $_FILES['photo'];
 $action = $_REQUEST['action'];
 
+$id = $_GET['id'];
+if ($id) {
+    $data = $controller->get($id);
+    header('Content-Type: application/json');
+    echo json_encode($data);
+exit;
+}
+
+
+if (!$action) {
+    $data = $controller->getAll();
+    header('Content-Type: application/json');
+    echo $data;
+}
 
 if ($action == 'store') {
     $data = [ 'lat' => $_REQUEST['lat'], 'lon' => $_REQUEST['lon'] ];

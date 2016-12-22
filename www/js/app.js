@@ -57,7 +57,7 @@ function createLflTooltip(image) {
         } else {
             tooltipTemplate += '<br/><a href="#" class="show-form"><img class="icon" src="assets/ic_add_a_photo_black_24px.svg"/>Add a photo</a>';
 
-            tooltipTemplate += '<form style="visibility:hidden" class="photo-add" action="save.php" method="post" enctype="multipart/form-data">';
+            tooltipTemplate += '<form style="visibility:hidden" class="photo-add" action="api/index.php" method="post" enctype="multipart/form-data">';
             tooltipTemplate += '<input type="hidden" name="action" value="photo"/>';
             tooltipTemplate += '<input type="hidden" name="address" value="{address}"/>';
             tooltipTemplate += '<input type="file" required accept="image/*" name="photo"/>';
