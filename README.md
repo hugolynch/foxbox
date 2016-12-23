@@ -4,7 +4,5 @@
   <img src="https://github.com/hugolynch/foxbox/blob/master/www/app-icon.png" alt="vim-devicons">
 </h1>
 
-[![GitHub version][img-version-badge]][badge-version]
-
 
 Discover hundreds of free book-exchange libraries throughout the city of Toronto in our crowdsourced, open source map.
