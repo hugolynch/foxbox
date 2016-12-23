@@ -61,6 +61,7 @@ function createLflTooltip(image) {
             tooltipTemplate += '<input type="hidden" name="action" value="photo"/>';
             tooltipTemplate += '<input type="hidden" name="address" value="{address}"/>';
             tooltipTemplate += '<input type="file" required accept="image/*" name="photo"/>';
+            tooltipTemplate += '<div class="message"></div>';
             tooltipTemplate += '<button type="submit">Save</button>';
             tooltipTemplate += '</form>';
         }
@@ -240,9 +241,26 @@ appmap.on('popupopen', function(e) {
     $("#mapid").on('submit', '.photo-add', function (e) {
         e.preventDefault();
 
-        var url = $(this).attr('action');
+        /* Validate image file */
+        var file = $("input:file", this)[0].files[0];
+
+        console.log(file.name);
+        console.log(file.size);
+        console.log(file.type);
+        var max_size = 2 * 1024 * 1024; // Mb
+        if (file.size > max_size) {
+            var message = "<p>The file is too big (" + formatBytes(file.size) + ").";
+            message += "<br/>The maximum size is " + formatBytes(max_size) + ".";
+            $(".message").html(message);
+            return;
+        }
+        else if(file.type != 'image/png' && file.type != 'image/jpg' && file.type != 'image/gif' && file.type != 'image/jpeg' ) {
+            $(".message").html("Invalid image file.");
+            return;
+        }
 
         data = new FormData( this );
+        var url = $(this).attr('action');
 
         $.ajax({
             url: url,
@@ -272,6 +290,15 @@ appmap.on('zoomend', function(event) {
     document.body.className = "zoom"+appmap.getZoom();
 });
 
+
+function formatBytes(bytes, decimals) {
+   if(bytes == 0) return '0 Byte';
+   var k = 1024;
+   var dm = decimals + 1 || 3;
+   var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+   var i = Math.floor(Math.log(bytes) / Math.log(k));
+   return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+}
 
 
 }());
