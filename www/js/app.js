@@ -62,7 +62,7 @@ function createLflTooltip(image) {
             tooltipTemplate += '<input type="hidden" name="address" value="{address}"/>';
             tooltipTemplate += '<input type="file" required accept="image/*" name="photo"/>';
             tooltipTemplate += '<div class="message"></div>';
-            tooltipTemplate += '<button type="submit">Save</button>';
+            tooltipTemplate += '<button class="save" style="display:none" type="submit">Save</button>';
             tooltipTemplate += '</form>';
         }
     return tooltipTemplate;
@@ -140,10 +140,6 @@ function onPopupOpen() {
 
     var tempMarker = this;
 
-    var tempMarkerGeoJSON = this.toGeoJSON();
-
-    //var lID = tempMarker._leaflet_id; // Getting Leaflet ID of this marker
-
     $(".add-button").on('click', function () {
         var address = $(this).data('address');
         console.log('add location to db');
@@ -175,8 +171,6 @@ function onPopupOpen() {
             .addTo(appmap)
             .bindPopup(tooltipContent)
             .openPopup();
-            
-            //alert( "Data Saved: " + msg );
         });
 
     });
@@ -236,28 +230,32 @@ function addr_search(e) {
 appmap.on('popupopen', function(e) {
     var tempMarker = this;
 
-
-    /* Upload image and update database. */
-    $("#mapid").on('submit', '.photo-add', function (e) {
-        e.preventDefault();
-
-        /* Validate image file */
-        var file = $("input:file", this)[0].files[0];
+    /* Validate image file */
+    $("#mapid").on('change', 'input:file', function (e) {
+        var file = this.files[0];
 
         console.log(file.name);
         console.log(file.size);
         console.log(file.type);
-        var max_size = 2 * 1024 * 1024; // Mb
+
+        var max_size = 10 * 1024 * 1024; // MB
         if (file.size > max_size) {
             var message = "<p>The file is too big (" + formatBytes(file.size) + ").";
             message += "<br/>The maximum size is " + formatBytes(max_size) + ".";
             $(".message").html(message);
-            return;
         }
         else if(file.type != 'image/png' && file.type != 'image/jpg' && file.type != 'image/gif' && file.type != 'image/jpeg' ) {
             $(".message").html("Invalid image file.");
-            return;
+        } else {
+            $(".save").show();
+            
         }
+    });
+
+
+    /* Upload image and update database. */
+    $("#mapid").on('submit', '.photo-add', function (e) {
+        e.preventDefault();
 
         data = new FormData( this );
         var url = $(this).attr('action');
@@ -292,12 +290,15 @@ appmap.on('zoomend', function(event) {
 
 
 function formatBytes(bytes, decimals) {
-   if(bytes == 0) return '0 Byte';
-   var k = 1024;
-   var dm = decimals + 1 || 3;
-   var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
-   var i = Math.floor(Math.log(bytes) / Math.log(k));
-   return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+   if (bytes == 0) {
+        return '0 Bytes';
+    }
+
+    var k = 1024;
+    var dm = decimals + 1 || 3;
+    var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+    var i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
 }
 
 
