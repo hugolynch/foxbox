@@ -156,10 +156,7 @@
         "coordinates": [
             43.6915839,
             -79.320557
-        ],
-        "image": "207-glebemount-ave.jpg",
-        "created_at": "2016-12-23 12:07:44",
-        "created_ip": "192.168.2.38"
+        ]
     },
     {
         "address": "9 Mount Royal Ave.",
@@ -362,10 +359,7 @@
         "coordinates": [
             43.6790543,
             -79.4016954
-        ],
-        "image": "228-cottingham-st.jpg",
-        "created_at": "2016-12-23 13:10:15",
-        "created_ip": "127.0.0.1"
+        ]
     },
     {
         "address": "21 Appleton Ave.",
@@ -502,10 +496,7 @@
         "coordinates": [
             43.6932269,
             -79.3667954
-        ],
-        "image": "93-nesbitt-drive-nesbitt-park.jpg",
-        "created_at": "2016-12-23 11:51:36",
-        "created_ip": "127.0.0.1"
+        ]
     },
     {
         "address": "22 Fernwood Park Ave.",
@@ -549,10 +540,7 @@
         "coordinates": [
             43.6674615,
             -79.3220259
-        ],
-        "image": "123-woodfield-rd.jpg",
-        "created_at": "2016-12-23 11:55:51",
-        "created_ip": "192.168.2.38"
+        ]
     },
     {
         "address": "114 Bevdale Rd.",
@@ -746,10 +734,7 @@
         "coordinates": [
             43.6323711,
             -79.3566683
-        ],
-        "image": "24-fifth-st-ward-s-island.jpg",
-        "created_at": "2016-12-22 17:19:42",
-        "created_ip": "127.0.0.1"
+        ]
     },
     {
         "address": "35 Melbourne Ave.",
@@ -884,10 +869,7 @@
         "coordinates": [
             43.6997991,
             -79.3715504
-        ],
-        "image": "21-airdrie-rd.jpg",
-        "created_at": "2016-12-23 11:40:41",
-        "created_ip": "127.0.0.1"
+        ]
     },
     {
         "address": "25 Delaney Cres.",
