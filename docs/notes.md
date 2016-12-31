@@ -131,6 +131,8 @@ http://www.insidetoronto.com/news-story/4948097-brockton-village-gets-its-own-li
 43.6463673,-79.4340142
 
 
+http://www.theglobeandmail.com/news/toronto/little-free-libraries-strengthening-the-spines-of-gta-communities/article22062863/
+
 
 ## Street name abbreviations:
 
