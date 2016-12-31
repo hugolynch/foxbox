@@ -105,7 +105,7 @@ layers.forEach(function(layer) {
             }
             else {
                 tooltipTemplate = createLflTooltip(library.image);
-                if (library.verified === true) {
+                if (library.verified) {
                     icon = verifiedIcon;
                 } else {
                     icon = myIcon;
@@ -147,7 +147,8 @@ function onPopupOpen() {
         console.log(tempMarker._latlng.lat);
         console.log(tempMarker._latlng.lng);
         
-        var url = $(this).attr('action');
+        //var url = $(this).attr('action');
+        var url = 'api/index.php';
 
         $.ajax({
             method: "POST",
