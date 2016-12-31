@@ -297,7 +297,8 @@
         "coordinates": [
             43.6409971,
             -79.4468643
-        ]
+        ],
+        "verified": "google-maps"
     },
     {
         "address": "53 Osler St.",
@@ -517,7 +518,8 @@
         "coordinates": [
             43.6388931,
             -79.4420665
-        ]
+        ],
+        "verified": "google-maps"
     },
     {
         "address": "848 Palmerston Ave.",
@@ -669,7 +671,8 @@
         "coordinates": [
             43.6817245,
             -79.2892062
-        ]
+        ],
+        "verified": true
     },
     {
         "address": "43 Galley Ave.",
@@ -695,11 +698,12 @@
         ]
     },
     {
-        "address": "Queensbury Ave.",
+        "address": " 7 Queensbury Ave.",
         "coordinates": [
             43.6904221,
             -79.276453
-        ]
+        ],
+        "verified": true
     },
     {
         "address": "20 Abbott Ave.",
@@ -755,7 +759,8 @@
         "coordinates": [
             43.6767177,
             -79.3005522
-        ]
+        ],
+        "verified": "google-maps"
     },
     {
         "address": "104 Winners Cir.",
@@ -770,7 +775,8 @@
         "coordinates": [
             43.6431281,
             -79.4523751
-        ]
+        ],
+        "verified": "google-maps"
     },
     {
         "address": "37 Chillery Ave.",
@@ -893,6 +899,66 @@
             -79.25718655
         ],
         "image": "12lakehurstcres.jpg",
+        "verified": true
+    },
+    {
+        "address": "109 South Woodrow Boulevard",
+        "created_at": "2016-12-30 15:26:38",
+        "created_ip": "127.0.0.1",
+        "coordinates": [
+            43.7010954,
+            -79.260897
+        ],
+        "verified": true
+    },
+    {
+        "address": "496 Scarborough Road",
+        "created_at": "2016-12-30 15:27:39",
+        "created_ip": "127.0.0.1",
+        "coordinates": [
+            43.685730085714,
+            -79.289363514286
+        ],
+        "verified": true
+    },
+    {
+        "address": "43 Woodlawn Park Drive",
+        "created_at": "2016-12-30 15:35:07",
+        "created_ip": "127.0.0.1",
+        "coordinates": [
+            43.687155972116,
+            -79.276439560843
+        ],
+        "verified": true
+    },
+    {
+        "address": "21 Browning Avenue",
+        "created_at": "2016-12-30 16:35:43",
+        "created_ip": "127.0.0.1",
+        "coordinates": [
+            43.681172618182,
+            -79.3562471
+        ],
+        "verified": true
+    },
+    {
+        "address": "116 Silver Birch Avenue",
+        "created_at": "2016-12-31 10:23:10",
+        "created_ip": "192.168.2.38",
+        "coordinates": [
+            43.674031906977,
+            -79.285728946512
+        ],
+        "verified": true
+    },
+    {
+        "address": "220 Silver Birch Avenue",
+        "created_at": "2016-12-31 10:24:29",
+        "created_ip": "192.168.2.38",
+        "coordinates": [
+            43.6776006,
+            -79.287184775
+        ],
         "verified": true
     }
 ]
