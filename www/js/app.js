@@ -135,6 +135,7 @@ layers.forEach(function(layer) {
 L.control.layers(null, overlays, {position: 'bottomright'}).addTo(appmap);
 L.control.zoom({position: 'bottomleft'}).addTo(appmap);
 
+L.control.locate({position: 'topright'}).addTo(appmap);
 
 function onPopupOpen() {
 
