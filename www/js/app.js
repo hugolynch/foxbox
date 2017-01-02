@@ -186,7 +186,7 @@ $("#search").on('submit', addr_search);
 
 function addr_search(e) {
     var search_suffix = ', Toronto';
-    var search_url = 'http://nominatim.openstreetmap.org/search?format=json&addressdetails=1&limit=1&q=';
+    var search_url = 'https://nominatim.openstreetmap.org/search?format=json&addressdetails=1&limit=1&q=';
     e.preventDefault();
 
     var inp = document.getElementById("address");
