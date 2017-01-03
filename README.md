@@ -1,7 +1,7 @@
 # foxbox
 
 <h1 align="center">
-  <img src="https://github.com/hugolynch/foxbox/blob/master/www/assets/favicon/android-chrome-192x192.png" alt="foxbox icon">
+  <img src="https://github.com/hugolynch/foxbox/blob/master/www/assets/footer.svg" alt="foxbox icon">
 </h1>
 
 
