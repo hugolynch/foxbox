@@ -1,7 +1,7 @@
 # foxbox
 
 <h1 align="center">
-  <img src="https://github.com/hugolynch/foxbox/blob/master/www/app-icon.png" alt="vim-devicons">
+  <img src="https://github.com/hugolynch/foxbox/blob/master/www/assets/favicon/android-chrome-192x192.png" alt="foxbox icon">
 </h1>
 
 
