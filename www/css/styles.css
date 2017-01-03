@@ -158,3 +158,13 @@ a.leaflet-popup-close-button {
         margin: 0;
     }
 }
+
+
+.fa-map-marker {
+    display: block;
+    width: 36px;
+    height: 36px;
+    background: url('../assets/icons/geolocation.svg') no-repeat;
+    background-position: -5px -5px;
+    background-size: 36px 36px; 
+}
