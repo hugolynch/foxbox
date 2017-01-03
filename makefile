@@ -8,7 +8,7 @@ www/images/%.jpg: photos/%.jpg
 
 
 upload:
-	rsync -avi www/ urbanwild:/var/www/urbanwild.to/foxbox
+	rsync -avi --exclude-from=.exclude www/ urbanwild:/var/www/urbanwild.to/foxbox
 
 pretty:
 	python -m json.tool www/libraries.json
