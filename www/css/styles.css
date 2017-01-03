@@ -61,12 +61,12 @@ display: none;
 
 div#logo {
   position: absolute;
-  bottom: 20px;
+  bottom: 50px;
   left: 50%;
+  margin-left: -22.5px;
   width: auto;
   height: auto;
   z-index: 9999;
-    margin-left: -22.5px;
 }
 
 
@@ -170,10 +170,25 @@ a.leaflet-popup-close-button {
 }
 
 
+
 .beta {
+  position: absolute;
+  bottom: 10px;
+  z-index: 9999;
+
+    width: 100%;
     text-align: center;
-    font-size: 0.8em;
+    font-size: 0.7em;
     font-weight: bold;
     color: #341f3e;
+}
+
+.beta a {
+    text-decoration: none;
+    color: #341f3e;
+}
+
+.beta a:hover {
+    text-decoration: underline;
 }
 
