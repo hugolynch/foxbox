@@ -168,3 +168,12 @@ a.leaflet-popup-close-button {
     background-position: -5px -5px;
     background-size: 36px 36px; 
 }
+
+
+.beta {
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #341f3e;
+}
+
