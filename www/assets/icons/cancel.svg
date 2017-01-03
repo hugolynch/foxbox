@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
-    <title>icon/geolocation</title>
+    <title>icon/cancel</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="icon/geolocation">
+        <g id="icon/cancel">
             <g id="icon/frame" opacity="0">
                 <g id="Group-2">
                     <rect id="frame" fill="#FFFFFF" x="0" y="0" width="36" height="36"></rect>
                     <rect id="bounding-box" fill="#000000" x="8" y="8" width="20" height="20"></rect>
                 </g>
             </g>
-            <path d="M19,25.9381062 C22.6187173,25.4868586 25.4868586,22.6187173 25.9381062,19 L28,19 L28,17 L25.9381062,17 C25.4868586,13.3812827 22.6187173,10.5131414 19,10.0618938 L19,8 L17,8 L17,10.0618938 C13.3812827,10.5131414 10.5131414,13.3812827 10.0618938,17 L8,17 L8,19 L10.0618938,19 C10.5131414,22.6187173 13.3812827,25.4868586 17,25.9381062 L17,28 L19,28 L19,25.9381062 Z M18,24 C21.3137085,24 24,21.3137085 24,18 C24,14.6862915 21.3137085,12 18,12 C14.6862915,12 12,14.6862915 12,18 C12,21.3137085 14.6862915,24 18,24 Z" id="Combined-Shape" fill="#000000"></path>
-            <circle id="Oval-2" fill="#000000" cx="18" cy="18" r="3"></circle>
+            <path d="M19,17 L19,10 L17,10 L17,17 L10,17 L10,19 L17,19 L17,26 L19,26 L19,19 L26,19 L26,17 L19,17 Z" id="Combined-Shape" fill="#000000" transform="translate(18.000000, 18.000000) rotate(-315.000000) translate(-18.000000, -18.000000) "></path>
         </g>
     </g>
 </svg>
