@@ -56,12 +56,12 @@ function createLflTooltip(image) {
             tooltipTemplate += '<br/><img width="150px" src="images/{image}"/>';
         } else {
             tooltipTemplate += '<br/><img width="150px" src="assets/placeholder.png"/>';
-            tooltipTemplate += '<br/><a href="#" class="show-form"><img class="icon" src="assets/ic_add_a_photo_black_24px.svg"/>Add a photo</a>';
+            tooltipTemplate += '<br/><a href="#" class="show-form"><img class="icon" src="assets/icons/photo.svg"/>Add a photo</a>';
 
             tooltipTemplate += '<form style="visibility:hidden" class="photo-add" action="api/index.php" method="post" enctype="multipart/form-data">';
             tooltipTemplate += '<input type="hidden" name="action" value="photo"/>';
             tooltipTemplate += '<input type="hidden" name="address" value="{address}"/>';
-            tooltipTemplate += '<input type="file" required accept="image/*" name="photo"/>';
+            tooltipTemplate += '<input type="file" style="width:100%" required accept="image/*" name="photo"/>';
             tooltipTemplate += '<div class="message"></div>';
             tooltipTemplate += '<button class="save" style="display:none" type="submit">Save</button>';
             tooltipTemplate += '</form>';
