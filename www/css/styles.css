@@ -19,8 +19,8 @@ header {
     z-index: 999;
     background: #fff;
     padding: 4px;
-    border-radius: 4px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 header button {
@@ -37,7 +37,8 @@ header button {
 
 
 #search input {
-  width: 200px;
+  width: 100%;
+border: none;
 }
 
 div#results {
@@ -47,21 +48,9 @@ div#results {
 }
 
 
-div#add {
-  background-color: white;
-  position: absolute;
-  bottom: 40px;
-  right: 40px;
-  width: auto;
-  height: auto;
-  padding: 10px;
-  z-index: 999;
-display: none;
-}
-
 div#logo {
   position: absolute;
-  bottom: 50px;
+  bottom: 30px;
   left: 50%;
   margin-left: -22.5px;
   width: auto;
@@ -152,31 +141,49 @@ a.leaflet-popup-close-button {
 }
 
 
-@media (max-width: 600px) {
-    header {
-        width: 100%;
-        margin: 0;
-    }
+#controls {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    padding: 10px;
+    z-index: 9999;
 }
 
-
-.fa-map-marker {
-    display: block;
-    width: 36px;
-    height: 36px;
-    background: url('../assets/icons/geolocation.svg') no-repeat;
-    background-position: -5px -5px;
-    background-size: 36px 36px; 
+.control {
+    border-radius: 3px;
+    background: #fff;
+    font-size: 0px;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
 
+.control:hover {
+    background: #ccc;
+}
+
+.control.active {
+    background: #3895ff;
+}
+
+#layers {
+}
+
+.leaflet-control-container,
+.fa, .fa-map-marker {
+    display: none;
+}
+
+footer {
+    background: #f6a623;
+    position: absolute;
+    padding: 5px;
+    bottom: 0px;
+    z-index: 9999;
+    width: 100%;
+}
 
 
 .beta {
-  position: absolute;
-  bottom: 10px;
-  z-index: 9999;
-
-    width: 100%;
     text-align: center;
     font-size: 0.7em;
     font-weight: bold;
@@ -184,11 +191,15 @@ a.leaflet-popup-close-button {
 }
 
 .beta a {
-    text-decoration: none;
     color: #341f3e;
 }
 
-.beta a:hover {
-    text-decoration: underline;
+
+@media (max-width: 600px) {
+    header {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
 }
 

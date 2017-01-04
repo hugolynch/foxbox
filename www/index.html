@@ -34,7 +34,7 @@
 
         <form id="search" action="#" method="post">
             <input type="text" required name="address" value=""
-            placeholder="type address" id="address" size="10" />
+                placeholder="Search Foxbox" id="address"/>
             <button type="submit">
                 <img src="assets/icons/search.svg" alt="search"/>
             </button>
@@ -42,24 +42,25 @@
         </form>
     </header>
 
-    <div id="mapid"></div>
+    <div id="mapid">
+        <div id="controls">
+            <div class="control" id="add"><img src="assets/icons/add.svg" alt="add library"/></div>
+            <div class="control" id="location"><img src="assets/icons/geolocation.svg" alt="where am I?"/></div>
+            <div class="control" id="layers"><img src="assets/icons/layers.svg" alt="filter layers"/></div>
+        </div>
 
-    <div id="add">
-        <form action="api/index.php">
-            <input type="text" name="address" required value="" size="10"/>
-            <input type="hidden" name="action" value="add"/>
-            <button type="submit">Add</button>
-        </form>
-    </div>
+        <div id="logo">
+            <img src="assets/footer.svg" alt="foxbox logo"/>
+        </div>
+     </div>
 
-    <div id="logo">
-        <img src="assets/footer.svg" alt="foxbox logo"/>
-    </div>
+   
+    <footer>
         <div class="beta">
             This site is in BETA. 
-            <br/>
             <a href="mailto:foxbox@urbanwild.to">Email us your thoughts!</a>
         </div>
+    </footer>
 
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"

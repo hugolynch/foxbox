@@ -133,10 +133,41 @@ layers.forEach(function(layer) {
 
 
 /* Add controls */
-L.control.layers(null, overlays, {position: 'bottomright'}).addTo(appmap);
-L.control.zoom({position: 'bottomleft'}).addTo(appmap);
+//L.control.layers(null, overlays, {position: 'bottomright'}).addTo(appmap);
 
-L.control.locate({position: 'topright'}).addTo(appmap);
+
+var lc = L.control.locate({position: 'topright'}).addTo(appmap);
+
+//var lc = L.control.locate();
+var geolocate = false;
+
+
+$("#add").on('click', function() {
+    alert("Not working yet. To add a library box, type the address in the search bar.");
+
+});
+
+$("#layers").on('click', function() {
+    alert("Not working yet.");
+
+});
+
+$("#location").on('click', function() {
+
+    var button = $(this);
+
+    if (geolocate) {
+        lc.stop();
+        geolocate = false;
+        button.removeClass('active');
+    } else {
+        geolocate = true;
+        lc.start();
+        button.addClass('active');
+    }
+    console.log("locate");
+
+});
 
 function onPopupOpen() {
 
