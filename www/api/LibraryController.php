@@ -56,6 +56,9 @@ class LibraryController
             copy($uploadfile, "../images/" . $filename);
 
             $this->updateDb($address, $filename);
+
+            $message = "Uploaded photo for $address";
+            $this->sendSlackMessage($message);
             return "$filename";
         } else {
             echo "Possible file upload attack!\n";
@@ -101,6 +104,8 @@ class LibraryController
 
         $result = file_put_contents($this->db_file, $r);
         //print_r($result);
+        $message = "New library bos at $address";
+        $this->sendSlackMessage($message);
     }
 
 
@@ -145,4 +150,13 @@ class LibraryController
         }
         return $text;
     }
+
+    private function sendSlackMessage($message)
+    {
+        $url = 'https://hooks.slack.com/services/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';
+        $body = "{\"text\": \"$message\"}";
+        exec("curl -X POST -H 'Content-type: application/json' --data '$body' $url");
+
+    }
+
 }
