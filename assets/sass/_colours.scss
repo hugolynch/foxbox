@@ -1,26 +1,23 @@
 // Colours
 
+
+// Brand colours
+
+$brand-primary: #ff5a00;
+$brand-secondary: #341f3e;
+
+
+// State colours
+
+$error: #ff0027;
+$warning: #f6a623;
+$success: #05dd45;
+$active: #3895ff;
+
+
+// Other colours
+
 $blackish: rgb(35, 35, 35);
 $whiteish: rgb(235, 235, 235);
 
-$shadow: rgba(0, 0, 0, 0.2);
-
-$grad0: rgb(246, 229, 118);
-
-$grad1: rgb(245, 219, 116);
-$grad2: rgb(244, 210, 116);
-$grad3: rgb(243, 198, 114);
-$grad4: rgb(243, 189, 113);
-$grad5: rgb(242, 181, 112);
-$grad6: rgb(242, 169, 111);
-$grad7: rgb(241, 158, 109);
-$grad8: rgb(240, 149, 108);
-$grad9: rgb(239, 139, 107);
-$grad10: rgb(239, 129, 106);
-$grad11: rgb(238, 117, 105);
-$grad12: rgb(238, 108, 105);
-$grad13: rgb(237, 98, 103);
-$grad14: rgb(237, 89, 102);
-$grad15: rgb(236, 78, 100);
-
-$gradient: $grad1, $grad2, $grad3, $grad4, $grad5, $grad6, $grad7, $grad8, $grad9, $grad10, $grad11, $grad12, $grad13, $grad14, $grad15;
+$shadow1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
