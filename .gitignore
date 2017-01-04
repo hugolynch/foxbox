@@ -2,5 +2,8 @@ Shared
 photos
 design
 .DS_Store
+.sass-cache
+*.swp
 www/images
 www/uploads
+www/css
