@@ -136,33 +136,38 @@ layers.forEach(function(layer) {
 //L.control.layers(null, overlays, {position: 'bottomright'}).addTo(appmap);
 
 
-var lc = L.control.locate({position: 'topright'}).addTo(appmap);
+var gc = L.control.locate({position: 'topright'}).addTo(appmap);
+var lc = L.control.layers(null, overlays, {position: 'bottomright'}).addTo(appmap);
 
-//var lc = L.control.locate();
+//var gc= L.control.locate();
 var geolocate = false;
 
 
-$("#add").on('click', function() {
+$("#add").on('click', function(e) {
+    e.stopPropagation();
     alert("Not working yet. To add a library box, type the address in the search bar.");
 
 });
 
-$("#layers").on('click', function() {
+$("#layers").on('click', function(e) {
+    e.stopPropagation();
     alert("Not working yet.");
-
+    console.log(lc);
 });
 
-$("#location").on('click', function() {
+$("#location").on('click', function(e) {
+
+    e.stopPropagation();
 
     var button = $(this);
 
     if (geolocate) {
-        lc.stop();
+        gc.stop();
         geolocate = false;
         button.removeClass('active');
     } else {
         geolocate = true;
-        lc.start();
+        gc.start();
         button.addClass('active');
     }
     console.log("locate");
@@ -243,7 +248,7 @@ function addr_search(e) {
             appmap.removeLayer(feature);
         }
         feature = L.marker(location, {icon: featureIcon}).addTo(appmap)
-            .bindPopup('Address: ' + new_address + '<br/>Location: ' + location + "<br/><button data-address='" + new_address + "' class='add-button'>Add to map</button>");
+            .bindPopup('Address: ' + new_address + '<br/>Location: ' + location + "<br/><button data-address='" + new_address + "' class='add-button'>Add to map</button>").openPopup();
         appmap.fitBounds(bounds);
         appmap.setZoom(18);
         feature.on("popupopen", onPopupOpen);
