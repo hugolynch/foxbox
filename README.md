@@ -5,4 +5,4 @@
 </h1>
 
 
-Discover hundreds of free book-exchange libraries throughout the city of Toronto in our crowdsourced, open-source map. We are currently in Beta. Email us your thoughts at <foxbox@urbanwild.to>.
+Discover hundreds of free book-exchange libraries throughout the city of Toronto in our crowdsourced, open-source map. We are currently in Beta. Email us your thoughts at <foxbox@opencommons.ca>.
