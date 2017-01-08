@@ -104,7 +104,7 @@ class LibraryController
 
         $result = file_put_contents($this->db_file, $r);
         //print_r($result);
-        $message = "New library bos at $address";
+        $message = "New foxbox added at $address";
         $this->sendSlackMessage($message);
     }
 

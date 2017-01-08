@@ -248,7 +248,7 @@ function addr_search(e) {
             appmap.removeLayer(feature);
         }
         feature = L.marker(location, {icon: featureIcon}).addTo(appmap)
-            .bindPopup('Address: ' + new_address + '<br/>Location: ' + location + "<br/><button data-address='" + new_address + "' class='add-button'>Add to map</button>").openPopup();
+            .bindPopup('Address: ' + new_address + '<br/>Location: ' + location + "<br/><button data-address='" + new_address + "' class='add-button'>Add to map</button>");
         appmap.fitBounds(bounds);
         appmap.setZoom(18);
         feature.on("popupopen", onPopupOpen);
