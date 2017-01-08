@@ -55,8 +55,13 @@ function createLflTooltip(image) {
         if (image) {
             tooltipTemplate += '<br/><img width="150px" src="images/{image}"/>';
         } else {
-            tooltipTemplate += '<br/><img width="150px" src="assets/placeholder.png"/>';
-            tooltipTemplate += '<br/><a href="#" class="show-form"><img class="icon" src="assets/icons/photo.svg"/>Add a photo</a>';
+            tooltipTemplate += '<div class="placeholder">';
+            tooltipTemplate += '<img width="150px" src="assets/placeholder.png"/>';
+            tooltipTemplate += '<div class="placeholder-add">';
+            tooltipTemplate += '<a href="#" class="show-form">';
+            tooltipTemplate += '<img src="assets/placeholder-icon.png"/>';
+            tooltipTemplate += '</a></div>';
+            tooltipTemplate += '</div>';
 
             tooltipTemplate += '<form style="visibility:hidden" class="photo-add" action="api/index.php" method="post" enctype="multipart/form-data">';
             tooltipTemplate += '<input type="hidden" name="action" value="photo"/>';

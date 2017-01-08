@@ -190,3 +190,15 @@ footer {
         width: 100%;
     }   
 }
+
+
+.placeholder {
+    position: relative;
+}
+
+.placeholder-add {
+    position: absolute;
+    top: calc(50% - 24px);
+    left: calc(50% - 24px);
+}
+
