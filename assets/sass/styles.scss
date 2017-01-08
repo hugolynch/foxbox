@@ -8,32 +8,46 @@ html, body {
 	height: 100%;
 }
 
+main {
+	padding-left: 300px;
+	width: calc(100%-300px);
+	display: flex;
+}
+
+sidebar {
+	height: 100%;
+	width: 300px;
+	position: absolute;
+	z-index: 2;
+	background-color: white;
+	border-right: 1px solid $whiteish;
+}
+
 header {
     position: absolute;
 	display: flex;
-	width: 100%;
     z-index: 1;
 	background: white;
     padding: 6px;
-    box-shadow: $shadow1;
+    border-bottom: 1px solid $whiteish;
+	flex-grow: 1;
+}
 
-	button {
-		background-color: $whiteish;
-		border: none;
-	}
-	
-	button:focus {
-		outline: none;
-	}
-	
-	#menu-button {
-		background-color: white;
-	}
+button {
+	background-color: $whiteish;
+	border: none;
+}
+
+button:focus {
+	outline: none;
+}
+
+#menu-button {
+	background-color: white;
 }
 
 #search {
     display: flex;
-    margin-left: 6px;
 	background-color: $whiteish;
 	border-radius: 3px;
 	padding: 6px;
@@ -43,6 +57,7 @@ header {
 		background-color: $whiteish;
 		width: 100%;
 		border: none;
+		margin-right: 6px;
 	}
 	
 	input:focus {
@@ -69,7 +84,7 @@ div#logo {
 
 #mapid {
     height: 100%;
-    width: 100%;
+    //width: 100%;
 	z-index: 0;
 }
 
@@ -166,9 +181,11 @@ footer {
     background-color: $warning;
     position: absolute;
     padding: 7px;
-    bottom: 0px;
-    z-index: 1;
-    width: 100%;
+    bottom: 0;
+    z-index: 3;
+	width: 100%;
+	position: absolute;
+	border-top: 1px solid $whiteish;
 }
 
 

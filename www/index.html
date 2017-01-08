@@ -27,46 +27,49 @@
 </head>
 
 <body>
-	
-    <header>
+	<sidebar>
 		<button type="button" id="menu-button">
 			<img src="assets/icons/menu.svg" alt="menu"/>
 		</button>
-
-		<form id="search" action="#" method="post">
-			<input type="text" required name="address" value="" placeholder="Search Foxbox" id="address"/>
-			<button type="submit">
-				<img src="assets/icons/search.svg" alt="search"/>
-			</button>
-			<div id="results"></div>
-		</form>
-    </header>
+	</sidebar>
 	
-	<div id="menu">
-		<div>Preferences</div>
-		<div>About</div>
-		<div>Help</div>
-		<div>Contact</div>
-		<div>Contributions</div>
-	</div>
+	<main>
+		<header>
+			<form id="search" action="#" method="post">
+				<input type="text" required name="address" value="" placeholder="Search Foxbox" id="address"/>
+				<button type="submit">
+					<img src="assets/icons/search.svg" alt="search"/>
+				</button>
+				<div id="results"></div>
+			</form>
+		</header>
 
-    <div id="mapid">
-        <div id="controls">
-            <div class="control" id="add"><img src="assets/icons/add.svg" alt="add library"/></div>
-            <div class="control" id="location"><img src="assets/icons/geolocation.svg" alt="where am I?"/></div>
-            <div class="control" id="layers"><img src="assets/icons/layers.svg" alt="filter layers"/></div>
-        </div>
+		<div id="menu">
+			<div>Preferences</div>
+			<div>About</div>
+			<div>Help</div>
+			<div>Contact</div>
+			<div>Contributions</div>
+		</div>
 
-        <div id="logo">
-            <img src="assets/footer.svg" alt="foxbox logo"/>
-        </div>
-     </div>
+		<div id="mapid">
+			<div id="controls">
+				<div class="control" id="add"><img src="assets/icons/add.svg" alt="add library"/></div>
+				<div class="control" id="location"><img src="assets/icons/geolocation.svg" alt="where am I?"/></div>
+				<div class="control" id="layers"><img src="assets/icons/layers.svg" alt="filter layers"/></div>
+			</div>
 
-    <footer>
-        <div class="beta">
+			<div id="logo">
+				<img src="assets/footer.svg" alt="foxbox logo"/>
+			</div>
+		 </div>
+	</main>
+
+	<footer>
+		<div class="beta">
 			This site is in BETA. <a href="mailto:foxbox@opencommons.ca">Email us</a> your thoughts!
-        </div>
-    </footer>
+		</div>
+	</footer>
 
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
