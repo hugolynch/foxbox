@@ -49,7 +49,6 @@ class LibraryController
             die;
         }
 
-
         if (move_uploaded_file($file['tmp_name'], $uploadfile)) {
             $convert_params = "-resize '300x300^' -gravity Center -crop 300x300+0+0";
             exec("convert $uploadfile $convert_params $uploadfile");

@@ -17,10 +17,19 @@ class LibraryController extends Controller
      */
     public function listLibraries()
     {
-        $libraries = Library::all();
+
+        $libraries = Library::with('size')
+            ->orderBy('lng')->get();
 
         return view('libraries.index')
             ->with('libraries', $libraries);
+    }
+
+    public function getLibraries()
+    {
+        $libraries = Library::with('images')->get();
+
+        return $libraries;
     }
 
     public function showLibrary($id)

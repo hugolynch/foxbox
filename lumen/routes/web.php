@@ -14,6 +14,7 @@
 $app->get('/', function () use ($app) {
 return $app->version();
 });
+$app->get('/api/libraries', 'LibraryController@getLibraries');
 
 $app->get('/libraries', 'LibraryController@listLibraries');
 $app->get('/libraries/{id}', 'LibraryController@showLibrary');

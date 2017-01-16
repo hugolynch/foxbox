@@ -4,50 +4,79 @@
 
 
 <form method="post" action="{{$library->id}}">
-    Address: <input name="address" value="{{ $library->address }}"/>
-    OSM: {{ $library->osm_name or '' }}
 
-    <br/>
-	Latitude: <input name="lat" value="{{ $library->lat }}"/>
-    OSM: {{ $library->osm_lat }}
+    <div>
+        <label>
+        Address: <input name="address" value="{{ $library->address }}"/>
+        </label>
+        OSM: {{ $library->osm_name or '' }}
+    </div>
+
+    <div>
+        <label>
+        Latitude: <input name="lat" value="{{ $library->lat }}"/>
+        </label>
+        OSM: {{ $library->osm_lat }}
+    </div>
     
-    <br/>
-    Longitude: <input name="lng" value="{{ $library->lng }}"/>
-    OSM: {{ $library->osm_lng }}
+    <div>
+        <label>
+        Longitude: <input name="lng" value="{{ $library->lng }}"/>
+        </label>
+        OSM: {{ $library->osm_lng }}
+    </div>
 
-    <br/>
-	Box latitude: <input name="box_lat" value="{{ $library->lat }}"/>
+    <div>
+        <label>
+        Box latitude: <input name="box_lat" value="{{ $library->box_lat }}"/>
+        </label>
+    </div>
     
-    <br/>
-    Box longitude: <input name="box_lng" value="{{ $library->lng }}"/>
+    <div>
+        <label>
+        Box longitude: <input name="box_lng" value="{{ $library->box_lng }}"/>
+        </label>
+    </div>
 
-    <br/>
-    LFL No: <input name="lfl_no" value="{{ $library->lfl_no }}"/>
+    <div>
+        <label>
+        LFL No: <input name="lfl_no" value="{{ $library->lfl_no }}"/>
+        </label>
+    </div>
 
-    <br/>
-    Verified: <input type="checkbox" value="1" name="verified" @if($library->verified) checked @endif/>
+    <div>
+        <label>
+        Verified: <input type="checkbox" value="1" name="verified" @if($library->verified) checked @endif/>
+        </label>
+    </div>
 
 
     <div>
-    Size: 
-    <select name="size_id">
-        <option value="">Select size</option>
-        @foreach ($sizes as $size)
-            <option
-                @if($library->size_id == $size->id) selected @endif
-                value="{{ $size->id }}">{{ $size->name }}</option> 
-        @endforeach
-    </select>
+        <label>
+        Size: 
+        <select name="size_id">
+            <option value="">Select size</option>
+            @foreach ($sizes as $size)
+                <option
+                    @if($library->size_id == $size->id) selected @endif
+                    value="{{ $size->id }}">{{ $size->name }}</option> 
+            @endforeach
+        </select>
+        </label>
     </div>
-
-    <br/>
-    <input type="submit" value="Save"/>
-    
-</form>
 
 
 @foreach ($library->images as $image)
-
+    <div>
     <img src="../../images/{{ $image->file_name }}"/>
+    <br/>
+    Quality: <input type="number" min="1" max="5" value="{{ $image->quality }}"/>
+    </div>
 @endforeach
+
+    <br/>
+    <input type="submit" value="Save"/>
+ 
+</form>
+
 @endsection

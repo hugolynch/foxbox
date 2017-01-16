@@ -12,4 +12,18 @@ class Library extends Model
     ];
 
 
+    public function size()
+    {
+        return $this->belongsTo('App\LibrarySize');
+    }
+
+    public function images()
+    {
+        return $this->hasMany('App\LibraryImage');
+    }
+
+    public function tags()
+    {
+        return $this->belongsToMany('App\LibraryTag');
+    }
 }
