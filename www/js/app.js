@@ -1,6 +1,8 @@
 (function() {
 
 
+
+
 var feature;
 
 var tile_url = 'https://api.mapbox.com/styles/v1/hugolynch/ciw1168ie003k2kr33r5p963z/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaHVnb2x5bmNoIiwiYSI6ImNpdzEwbHc1YTA5Mm8yb3BiOHR5eHB5YWIifQ.9Gkbywr6-VD6cEJrUneNBA';
@@ -97,11 +99,26 @@ var layers = [
 ];
 
 var overlays = {};
+var overlays_v = {};
+
+var fb;
+$.getJSON('admin/api/libraries', function(data) {
+        fb = data;
+});
+
+
+layers.forEach(function(layer) {
+    $("#layers-menu-ui").hide();
+    $("#layers-menu-ui").append('<a href="#" class="active" data-filter="' + layer.id + '">' + layer.name + '</li>');
+});
+
+
 
 layers.forEach(function(layer) {
     layer.data = L.layerGroup();
     
     $.getJSON(layer.id + '.json', function(data) {
+
         data.forEach(function(library) {
 
             /* If we have a name, it is a Toronto Public Library */            
@@ -125,15 +142,15 @@ layers.forEach(function(layer) {
             };
             var tooltipContent = L.Util.template(tooltipTemplate, tooltipData); 
 
-            L.marker(library.coordinates, {icon: icon})
+            L.marker(library.coordinates, {icon: icon, title: library.address})
             .addTo(layer.data)
             .bindPopup(tooltipContent);
         });
     });
 
-    layer.data.addTo(appmap);
+    overlays[layer.id] = layer.data.addTo(appmap);
+    overlays_v[layer.id] = true;
 
-    overlays[layer.name] = layer.data;
 });
 
 
@@ -156,9 +173,26 @@ $("#add").on('click', function(e) {
 
 $("#layers").on('click', function(e) {
     e.stopPropagation();
-    alert("Not working yet.");
-    console.log(lc);
+    $('#layers-menu-ui').toggle();
 });
+
+$('#layers-menu-ui a').on('click', function(e) {
+    e.stopPropagation();
+
+    $(this).addClass('active');    
+    var filter = $(this).data('filter');
+
+    if (overlays_v[filter] == true) {
+        overlays_v[filter] = false;
+        $(this).removeClass('active');    
+        overlays[filter].remove();
+    } else {
+        overlays[filter].addTo(appmap);
+        overlays_v[filter] = true;
+        $(this).addClass('active');    
+    }
+});
+
 
 $("#location").on('click', function(e) {
 
@@ -185,10 +219,6 @@ function onPopupOpen() {
 
     $(".add-button").on('click', function () {
         var address = $(this).data('address');
-        console.log('add location to db');
-        console.log(address);
-        console.log(tempMarker._latlng.lat);
-        console.log(tempMarker._latlng.lng);
         
         //var url = $(this).attr('action');
         var url = 'api/index.php';
@@ -231,7 +261,20 @@ function addr_search(e) {
     e.preventDefault();
 
     var inp = document.getElementById("address");
+    //var address = inp.value + search_suffix;
     var address = inp.value + search_suffix;
+
+
+    /* Check if we have this address in our database */
+    /*
+    for (i in fb) {
+        if (fb[i].address == address) {
+            console.log(fb[i]);
+            return fb[i].address;
+        }
+    }
+    */
+
     $.getJSON(search_url + address, function(data) {
 
         $('#results').empty();
@@ -275,12 +318,8 @@ appmap.on('popupopen', function(e) {
     var tempMarker = this;
 
     /* Validate image file */
-    $("#mapid").on('change', 'input:file', function (e) {
+    $("#mapid").off('change').on('change', 'input:file', function (e) {
         var file = this.files[0];
-
-        console.log(file.name);
-        console.log(file.size);
-        console.log(file.type);
 
         var max_size = 10 * 1024 * 1024; // MB
         if (file.size > max_size) {
@@ -298,7 +337,7 @@ appmap.on('popupopen', function(e) {
 
 
     /* Upload image and update database. */
-    $("#mapid").on('submit', '.photo-add', function (e) {
+    $("#mapid").off('submit').on('submit', '.photo-add', function (e) {
         e.preventDefault();
 
         data = new FormData( this );
